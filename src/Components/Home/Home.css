@@ -1,8 +1,21 @@
-.home-wrapper{
+.home-wrapper {
   border: solid green;
   height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.view-work-button {
+  text-decoration: none;
+  color: inherit;
+  border: solid black;
+  padding: 2%;
+  transition-duration: 0.7s;
+}
+
+.view-work-button:hover {
+  background-color: aqua;
+ 
 }
