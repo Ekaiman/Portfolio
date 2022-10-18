@@ -1,0 +1,14 @@
+.nav-wrapper {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+
+}
+
+.nav-items {
+  border: solid yellow;
+  display: flex;  
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
