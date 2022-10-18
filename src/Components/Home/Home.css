@@ -1,0 +1,8 @@
+.home-wrapper{
+  border: solid green;
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
