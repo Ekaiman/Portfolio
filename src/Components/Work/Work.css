@@ -1,4 +1,19 @@
 .work-wrapper {
-  border: solid red;
-  height: 100vh;
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh;
+    min-height: 100vh;
+}
+
+.project-holder {
+    border: solid purple;
+    height: 75%;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
 }
