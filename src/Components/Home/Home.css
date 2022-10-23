@@ -5,7 +5,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: slide-in 1s linear;
 }
+
+/* @keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+} */
 
 .view-work-button {
   text-decoration: none;
