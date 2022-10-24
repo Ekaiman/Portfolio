@@ -6,7 +6,7 @@ const Contact = () => {
       <section id='hexagon'>
         <section id='contact' className='contact-wrapper'>
           <div className='space'></div>
-          <h1>CONTACT</h1>
+          <h1 className='section-title'>CONTACT</h1>
           <p>Have a question or want to work together?</p>
           <p>Shoot me an <a href='mailto:emilikaiman@gmail.com'>email.</a></p>
           <footer className='contact-links'>
