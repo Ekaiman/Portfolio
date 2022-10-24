@@ -1,11 +1,12 @@
 .home-wrapper {
-  border: solid green;
+  /* border: solid green; */
   height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   animation: slide-in 1s linear;
+  background-color: #252934;
 }
 
 /* @keyframes slide-in {

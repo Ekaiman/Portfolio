@@ -1,5 +1,5 @@
 .work-wrapper {
-    border: solid red;
+    /* border: solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +8,8 @@
     min-height: 100vh;
 }
 
-.project-holder {
-    border: solid purple;
+.project-holder:not(.modal-holder) {
+    /* border: solid purple; */
     height: 75%;
     width: 75%;
     display: flex;

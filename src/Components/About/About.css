@@ -1,5 +1,5 @@
 .about-screen {
-  border: solid blue;
+  /* border: solid blue; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,6 +18,14 @@
   height: 35vh;
 }
 
+.about-underline {
+ border: solid red;
+ border-width: 0px 0px 3px 0px;
+}
+
+.about-word {
+  margin: 0;
+}
 
 @media only screen and (min-width: 768px) {
   .about-wrapper {
