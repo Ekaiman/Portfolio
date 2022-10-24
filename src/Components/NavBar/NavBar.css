@@ -1,14 +1,30 @@
-.nav-wrapper {
-	position: -webkit-sticky; /* Safari */
-	position: sticky;
-	top: 0;
+li {
+  list-style-type: none;
+}
 
+.nav-wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #1b2430;
+  margin: 0px;
+  z-index: 9;
+  
 }
 
 .nav-items {
-  border: solid yellow;
-  display: flex;  
+  /* border: solid yellow; */
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+  align-items: center;
+  height: 4vh;
+  color: white;
+  padding: 1px;
+  margin: 0px;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: inherit;
 }
