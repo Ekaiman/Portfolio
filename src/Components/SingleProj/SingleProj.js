@@ -1,30 +1,37 @@
 import './SingleProj.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../Modal/Modal'
+import { motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
 
 const SingleProj = ({ title, img, gitHub, showModal, setSelectedProj, overview }) => {
-  // const [showing, setShowing] = useState(false)
+  const control = useAnimation()
+  const [ref, inView] = useInView()
 
-  // const showModal = () => {
-  //   setShowing(true)
-  // }
+  const boxVariantBottom = {
+    visible: { y: 0, opacity: 1 },
+    hidden: { y: 200, opacity: 0 }
+  }
 
-  // const closeModal = () => {
-  //   setShowing(false)
-  // }
+  
+
+  useEffect(() => {
+    console.log(inView)
+    if (inView) {
+      control.start('visible')
+    }
+  }, [control, inView])
 
   return (
     <>
       
-        {/* <Modal
-          title={title}
-          gitHub={gitHub}
-          show={showing}
-          closeModal={closeModal}
-          setShowing={setShowing}
-        /> */}
-      
-      <div className='container'>
+      <motion.div
+        ref={ref}
+        variants={boxVariantBottom}
+        initial='hidden'
+        animate={control}
+        transition={{ ease: 'easeIn', duration: 1, delay: 0.4 }} className='container'>
         <img className='project-image' src={img} />
         <div class='middle'>
           <button
@@ -37,7 +44,7 @@ const SingleProj = ({ title, img, gitHub, showModal, setSelectedProj, overview }
             SEE MORE
           </button>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }
