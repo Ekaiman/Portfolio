@@ -43,7 +43,7 @@ const Work = ({showModal, setSelectedProj, showing, closeModal, title, img, gitH
   return (
     <section id='work' className='work-wrapper'>
       <Modal show={showing} closeModal={closeModal} title={title} img={img} gitHub={gitHub} overview={overview} />
-      <h1>This section is about my work</h1>
+      <h1 className='section-title'>PROJECTS</h1>
       <div className='project-holder'>
         {projectCard}
       </div>
