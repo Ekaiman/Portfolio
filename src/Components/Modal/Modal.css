@@ -5,13 +5,117 @@
 } */
 
 .modal-holder {
-  border: solid green;
+  /* border: solid green; */
   position: fixed;
   z-index: 10;
   height: 60vh;
   width: 80vw;
-  background-color: blanchedalmond;
   position: fixed;
   top: 0;
-  margin-top: 20%;
+  margin-top: 10%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  transition-duration: 4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3vh;
+}
+
+.modal-image {
+  max-height: 70%;
+}
+
+.image-in-modal {
+  max-height: 100%;
+}
+
+.overview-holder {
+  /* border: solid yellow; */
+  max-width: 70%;
+}
+
+hr {
+  size: 1px;
+  border-width: 2px;
+}
+
+.title {
+  color: #595959;
+}
+
+.overview {
+  color: #595959;
+}
+
+.gitHub-button {
+  display: block;
+  text-decoration: none;
+  width: 115px;
+  height: 25px;
+  background: #4e9caf;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+}
+
+.gitHub-button:hover {
+  background-color: white;
+  color: #4e9caf;
+  transition-duration: 2s;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: transparent;
+  color: #4e9caf;
+
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+  transition-duration: 2s;
+}
+
+.close:focus {
+  outline: solid 0 transparent;
+  box-shadow: 0 0 0 2px #080c0f;
+}
+
+.close:hover {
+    background: #4e9caf;
+    color: white;
+
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 0.0625em);
+  width: 0.125em;
+  height: 70%;
+  border-radius: 0.125em;
+  transform: rotate(45deg);
+  background: currentcolor;
+  content: '';
+}
+
+.close:after {
+  transform: rotate(-45deg);
 }
