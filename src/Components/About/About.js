@@ -26,7 +26,7 @@ const About = () => {
 
   return (
     <div id='about' className='about-screen'>
-      <h1 className='about-word'> ABOUT</h1>
+      <h1 className='section-title'> ABOUT</h1>
 
       <motion.section
         ref={ref}
@@ -46,13 +46,21 @@ const About = () => {
           variants={boxVariantRight}
           initial='hidden'
           animate={control}
-          transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: .5 }}
+          transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.5 }}
           className='about-items'
         >
-          <h2 className='item1'>first</h2>
-          <h2 className='item2'>second</h2>
-          <h2 className='item3'>third</h2>
-          <h2 className='item4'>fourth</h2>
+          <h2 className='about-words'>
+            I'm Emili, an outdoor entushiast and artist gone Front-End Engineer.
+          </h2>
+          <h3 className='about-words'>
+            After an accident thats changed my abilities to push my limits
+            outdoors, I've found ways to mentally push limits through software
+            engineering.
+          </h3>
+          <h3 className='about-words'>
+            I've spent the last year learning front-end development,
+            specifically vanilla JavaScript, React and TypeScript.
+          </h3>
         </motion.section>
       </motion.section>
     </div>
