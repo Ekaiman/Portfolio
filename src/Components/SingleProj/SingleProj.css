@@ -32,7 +32,7 @@
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -40,8 +40,18 @@
 }
 
 .text {
-  background-color: #04aa6d;
+  background-color: #da59d4;
   color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+  border: solid #da59d4;
+  font-size: 3vh;
+  padding: 5px 10px;
+}
+
+.text:hover {
+  background-color: transparent;
+  border: solid #da59d4;
+  color:#da59d4;
+  transition-duration: 2s;
+  cursor: pointer;
+
 }
