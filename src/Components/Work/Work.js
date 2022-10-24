@@ -36,8 +36,8 @@ const Work = ({showModal, setSelectedProj, showing, closeModal, title, img, gitH
     }
   ]
 
-  const projectCard = projects.map(proj => {
-    return <SingleProj setSelectedProj={setSelectedProj} showModal={showModal} title={proj.title} img={proj.img} gitHub={proj.gitHub} overview={proj.overview} />
+  const projectCard = projects.map((proj, index) => {
+    return <SingleProj index={index}  setSelectedProj={setSelectedProj} showModal={showModal} title={proj.title} img={proj.img} gitHub={proj.gitHub} overview={proj.overview} />
   })
 
   return (
