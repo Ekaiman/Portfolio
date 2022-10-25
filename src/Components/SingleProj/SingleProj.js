@@ -5,32 +5,32 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 
-const SingleProj = ({ index, title, img, gitHub, showModal, setSelectedProj, overview }) => {
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+const SingleProj = ({ control, ref, inView, index, title, img, gitHub, showModal, setSelectedProj, overview }) => {
+  // const control = useAnimation()
+  // const [ref, inView] = useInView()
 
   const boxVariantBottom = {
     visible: { y: 0, opacity: 1 },
-    hidden: { y: 200, opacity: 0 }
+    hidden: { y: 50, opacity: 0 }
   }
 
+  console.log(control)
   
 
-  useEffect(() => {
-    console.log(inView)
-    if (inView) {
-      control.start('visible')
-    }
-  }, [control, inView])
+  // useEffect(() => {
+  //   console.log(inView, 'yes')
+  //   if (inView) {
+  //     control.start('visible')
+  //   }
+  // }, [control, inView])
 
   return (
     <>
       <motion.div
-        ref={ref}
         variants={boxVariantBottom}
         initial='hidden'
         animate={control}
-        transition={{ ease: [1, -0.65, 0, 2.25], duration: 1, delay: index - .9 }}
+        transition={{ ease: 'easeIn', duration: 1, delay: index- .6 }}
         className='container'
       >
         <img className='project-image' src={img} />
@@ -51,6 +51,7 @@ const SingleProj = ({ index, title, img, gitHub, showModal, setSelectedProj, ove
           </button>
         </div>
       </motion.div>
+      
     </>
   )
 }
