@@ -4,7 +4,7 @@ const Modal = ({ show, title, img, gitHub, closeModal, overview }) => {
   return (
     show && (
       // <section className="modal-outside">
-      <div className='modal-holder'>
+      <div className='modal-holder' onClick={e => e.stopPropagation()}>
         <div className='modal-image'>
           <img className='image-in-modal' src={img} />
         </div>

@@ -20,11 +20,17 @@ function App() {
 
   const closeModal = () => {
     setShowing(false)
+    console.log('here')
     setSelectedProj({ title: '', img: '', gitHub: '', overview: '' })
   }
 
   return (
-    <div className='app'>
+    <div
+      className='app'
+      onClick={() => {
+        closeModal()
+      }}
+    >
       <Home />
       {/* {scroll && <NavBar setScroll={setScroll} />} */}
       <NavBar />
