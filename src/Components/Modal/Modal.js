@@ -3,7 +3,7 @@ import './Modal.css'
 const Modal = ({ show, title, img, gitHub, closeModal, overview }) => {
   return (
     show && (
-      // <section className="modal-outside">
+      <section className="modal-outside">
       <div className='modal-holder' onClick={e => e.stopPropagation()}>
         <div className='modal-image'>
           <img className='image-in-modal' src={img} />
@@ -31,8 +31,8 @@ const Modal = ({ show, title, img, gitHub, closeModal, overview }) => {
           </div>
         </section>
       </div>
+    </section>
     )
-    // </section>
   )
 }
 
