@@ -5,13 +5,13 @@ import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 
-const SingleProj = ({ control, ref, inView, index, title, img, lang, gitHub, showModal, setSelectedProj, overview }) => {
+const SingleProj = ({ control,  inView, index, title, img, lang, gitHub, showModal, setSelectedProj, overview }) => {
   // const control = useAnimation()
   // const [ref, inView] = useInView()
 
   const boxVariantBottom = {
-    visible: { y: 0, opacity: 1 },
-    hidden: { y: 50, opacity: 0 }
+    visible: { y: 0, opacity: 1, scale: 1 },
+    hidden: { y: 200, opacity: 0, scale: .4 }
   }
 
   // console.log(control)
@@ -30,11 +30,14 @@ const SingleProj = ({ control, ref, inView, index, title, img, lang, gitHub, sho
         variants={boxVariantBottom}
         initial='hidden'
         animate={control}
-        transition={{ ease: 'easeIn', duration: 1, delay: index - 0.6 }}
+        transition={{ ease: 'easeIn', duration: .2, delay: index - (index * .8) }}
         className='container'
       >
         <img className='project-image' src={img} />
-        <div class='middle'>
+        <div
+         
+          className='middle'
+        >
           {/* <button
             onClick={() => {
               showModal()
@@ -52,10 +55,10 @@ const SingleProj = ({ control, ref, inView, index, title, img, lang, gitHub, sho
           <h1>{title}</h1>
           <p>{lang}</p>
           <button
-            class='button-6'
+            className='button-6'
             role='button'
-            onClick={(e) => {
-             e.stopPropagation()
+            onClick={e => {
+              e.stopPropagation()
               showModal()
               setSelectedProj({
                 title: title,
