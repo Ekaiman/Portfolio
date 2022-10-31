@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useInView } from 'react-intersection-observer'
 import './Home.css'
 
 const Home = () => {
@@ -11,11 +12,27 @@ const Home = () => {
     setWindowSize({height: window.innerHeight, width: window.innerWidth})
   }
   
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    // console.log(inView)
+    if (inView) {
+ 
+      console.log('home')
+      document.querySelector('.home').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
+      document.querySelector('.about').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+    }
+  }, [inView])
+
   return (
-    <header onMouseMove={(event) => {handleMouseMove(event) } } id='home' className='home-wrapper'>
+    <header ref={ref}  onMouseMove={(event) => {handleMouseMove(event) } } id='home' className='home-wrapper'>
       <h1 className='home-text'>Hey, I'm <span style={{color: 'hotpink'}}>Emili.</span></h1>
       <h1 className='home-text'>Front-end devloper.</h1>
-      <a href='#about' className='view-work-button'>
+      <a href='#about' className='view-work-button' onClick={() => { 
+        document.querySelector('.about').ariaCurrent='page'
+      } }>
         {' '}
         View my work
       </a>

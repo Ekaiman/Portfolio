@@ -1,14 +1,29 @@
 import './Contact.css'
+import { useInView } from 'react-intersection-observer'
+import { useEffect } from 'react'
 
 const Contact = () => {
+  const [ref, inView] = useInView()
+
+  useEffect(() => {
+    // console.log(inView)
+    if (inView) {
+      console.log('ABOUT')
+      document.querySelector('.contact').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.about').ariaCurrent = false
+    } 
+  }, [inView])
   return (
     <>
-      <section id='hexagon'>
+      <section ref={ref} id='hexagon'>
         <section id='contact' className='contact-wrapper'>
           <div className='space'></div>
           <h1 className='section-title'>CONTACT</h1>
           <p>Have a question or want to work together?</p>
           <p>Shoot me an <a href='mailto:emilikaiman@gmail.com'>email.</a></p>
+          <button></button>
           <footer className='contact-links'>
             <a
               target='_blank'

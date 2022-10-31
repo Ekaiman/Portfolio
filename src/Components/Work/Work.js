@@ -1,7 +1,7 @@
 import SingleProj from '../SingleProj/SingleProj'
 import './Work.css'
 import Modal from '../Modal/Modal'
-import { motion, useAnimation } from 'framer-motion'
+import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
@@ -19,10 +19,14 @@ const Work = ({
   const [ref, inView] = useInView()
 
   useEffect(() => {
-    console.log(inView, 'yes')
     if (inView) {
       control.start('visible')
-    }
+      document.querySelector('.about').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+      document.querySelector('.work').ariaCurrent = 'page'
+      console.log('???')
+    } 
   }, [control, inView])
 
   const projects = [
@@ -32,7 +36,7 @@ const Work = ({
       img: '../../../../project_imgs/dnd.png',
       gitHub: 'https://github.com/jskomal/roll-for-initiative',
       overview:
-      'Roll For Initiative is a chance style combat game featuring the mythical monster and courageous herse from the Dungens and Dragons (DnD) universe. Written in React and TypeScript.',
+        'Roll For Initiative is a chance style combat game featuring the mythical monster and courageous herse from the Dungens and Dragons (DnD) universe. Written in React and TypeScript.',
       lang: 'React/TypeScript'
     },
     {
@@ -74,7 +78,6 @@ const Work = ({
   const projectCard = projects.map((proj, index) => {
     return (
       <SingleProj
-        
         inView={inView}
         index={index}
         setSelectedProj={setSelectedProj}
@@ -92,17 +95,19 @@ const Work = ({
 
   return (
     <motion.section ref={ref} id='work' className='work-wrapper'>
-      <Modal
-        show={showing}
-        closeModal={closeModal}
-        title={title}
-        img={img}
-        gitHub={gitHub}
-        overview={overview}
-      />
+      <AnimatePresence initial={false}>
+        <Modal
+          show={showing}
+          closeModal={closeModal}
+          title={title}
+          img={img}
+          gitHub={gitHub}
+          overview={overview}
+        />
+      </AnimatePresence>
 
       <h1 className='section-title'>PROJECTS</h1>
-      <div className='project-holder'>{projectCard}</div>
+      <div ref={ref} className='project-holder'>{projectCard}</div>
     </motion.section>
   )
 }

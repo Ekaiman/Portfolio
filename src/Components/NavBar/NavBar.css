@@ -9,7 +9,6 @@ li {
   background-color: #1b2430;
   margin: 0px;
   z-index: 9;
-  
 }
 
 .nav-items {
@@ -27,4 +26,13 @@ li {
 .nav-button {
   text-decoration: none;
   color: inherit;
+}
+
+.nav-button[aria-current='page'] {
+  /* background-color: rgba(159, 159, 159, 0.295);
+  font-weight: 700;
+  text-decoration: underline; */
+  color: hotpink;
+  /* transition-delay: 1s; */
+  transition-duration: 2s;
 }
