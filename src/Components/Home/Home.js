@@ -15,10 +15,7 @@ const Home = () => {
   const [ref, inView] = useInView()
 
   useEffect(() => {
-    // console.log(inView)
     if (inView) {
- 
-      console.log('home')
       document.querySelector('.home').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.about').ariaCurrent = false

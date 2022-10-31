@@ -21,12 +21,11 @@ const Work = ({
   useEffect(() => {
     if (inView) {
       control.start('visible')
+      document.querySelector('.work').ariaCurrent = 'page'
       document.querySelector('.about').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.contact').ariaCurrent = false
-      document.querySelector('.work').ariaCurrent = 'page'
-      console.log('???')
-    } 
+    }
   }, [control, inView])
 
   const projects = [
@@ -107,7 +106,7 @@ const Work = ({
       </AnimatePresence>
 
       <h1 className='section-title'>PROJECTS</h1>
-      <div ref={ref} className='project-holder'>{projectCard}</div>
+      <div className='project-holder'>{projectCard}</div>
     </motion.section>
   )
 }

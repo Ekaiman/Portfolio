@@ -2,17 +2,21 @@ import NavBar from '../NavBar/NavBar'
 import Work from '../Work/Work'
 import Home from '../Home/Home'
 import About from '../About/About'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Contact from '../Contact/Contact'
+import React from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-
-// import Modal from '../Modal/Modal'
+import Modal from '../Modal/Modal'
 
 function App() {
   const [showing, setShowing] = useState(false)
-  const [selectedProj, setSelectedProj] = useState({title: '', img: '', gitHub: '', overview: ''})
+  const [selectedProj, setSelectedProj] = useState({
+    title: '',
+    img: '',
+    gitHub: '',
+    overview: ''
+  })
 
   const showModal = () => {
     setShowing(true)
@@ -20,7 +24,6 @@ function App() {
 
   const closeModal = () => {
     setShowing(false)
-    console.log('here')
     setSelectedProj({ title: '', img: '', gitHub: '', overview: '' })
   }
 
