@@ -2,7 +2,7 @@ import NavBar from '../NavBar/NavBar'
 import Work from '../Work/Work'
 import Home from '../Home/Home'
 import About from '../About/About'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import './App.css'
 import Contact from '../Contact/Contact'
 import React from 'react'
@@ -11,6 +11,37 @@ import Modal from '../Modal/Modal'
 
 function App() {
   const [showing, setShowing] = useState(false)
+  const [elementInView, setElementInView] = useState([])
+  const [scrollDirection, setScrollDirection] = useState('')
+  
+  useEffect(() => { 
+    if (elementInView.length === 1 && elementInView.includes('home')) {
+      document.querySelector('.home').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
+      document.querySelector('.about').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+    } else if (elementInView.length === 1 && elementInView.includes('about')) {
+      document.querySelector('.about').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+    } else if (elementInView.length === 1 && elementInView.includes('work')) {
+      document.querySelector('.work').ariaCurrent = 'page'
+      document.querySelector('.about').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+    } else if (elementInView.length === 1 && elementInView.includes('contact')) {
+      document.querySelector('.contact').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.work').ariaCurrent = false
+    } else if (elementInView.length > 1) {
+      document.querySelector('.contact').ariaCurrent = elementInView[1]
+      
+    }
+  }, [elementInView])
+
+
   const [selectedProj, setSelectedProj] = useState({
     title: '',
     img: '',
@@ -27,6 +58,40 @@ function App() {
     setSelectedProj({ title: '', img: '', gitHub: '', overview: '' })
   }
 
+  const [y, setY] = useState(window.scrollY)
+  const [innerHeight, setInnerHeight] = useState(window.innerHeight)
+
+  
+  const onResize = () => { 
+    setInnerHeight(window.innerHeight)
+  }
+
+  window.addEventListener('resize', onResize)
+  
+  const handleNavigation = useCallback(
+    e => {
+      const window = e.currentTarget
+      if (y > window.scrollY) {
+        console.log('scrolling up')
+        setScrollDirection('up')
+      } else if (y < window.scrollY) {
+        console.log('scrolling down')
+        setScrollDirection('down')
+      }
+      setY(window.scrollY)
+    },
+    [y]
+  )
+
+  useEffect(() => {
+    setY(window.scrollY)
+    window.addEventListener('scroll', handleNavigation)
+
+    return () => {
+      window.removeEventListener('scroll', handleNavigation)
+    }
+  }, [handleNavigation])
+
   return (
     <div
       className='app'
@@ -34,10 +99,13 @@ function App() {
         closeModal()
       }}
     >
-      <Home />
+      <Home setElementInView={setElementInView} elementInView={elementInView} />
       {/* {scroll && <NavBar setScroll={setScroll} />} */}
       <NavBar />
-      <About />
+      <About
+        setElementInView={setElementInView}
+        elementInView={elementInView}
+      />
       {/* (<Modal show={showing} closeModal={closeModal} title={selectedProj.title} img={selectedProj.img} github ={selectedProj.gitHub} /> */}
       <Work
         showModal={showModal}
@@ -48,8 +116,13 @@ function App() {
         img={selectedProj.img}
         gitHub={selectedProj.gitHub}
         overview={selectedProj.overview}
+        setElementInView={setElementInView}
+        elementInView={elementInView}
       />
-      <Contact />
+      <Contact
+        setElementInView={setElementInView}
+        elementInView={elementInView}
+      />
     </div>
   )
 }

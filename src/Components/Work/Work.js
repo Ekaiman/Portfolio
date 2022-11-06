@@ -13,20 +13,38 @@ const Work = ({
   title,
   img,
   gitHub,
-  overview
+  overview,
+  setElementInView,
+  elementInView
 }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
 
+  const [ref1, inView1] = useInView()
+
   useEffect(() => {
     if (inView) {
       control.start('visible')
-      document.querySelector('.work').ariaCurrent = 'page'
-      document.querySelector('.about').ariaCurrent = false
-      document.querySelector('.home').ariaCurrent = false
-      document.querySelector('.contact').ariaCurrent = false
     }
   }, [control, inView])
+
+  useEffect(() => {
+    if (inView1) {
+      console.log('WORK')
+      // document.querySelector('.work').ariaCurrent = 'page'
+      // document.querySelector('.about').ariaCurrent = false
+      // document.querySelector('.home').ariaCurrent = false
+      // document.querySelector('.contact').ariaCurrent = false
+      setElementInView(prev => [...prev, 'work'])
+    }
+
+    if (!inView1) {
+      console.log('not in view WORK')
+      let removeElem = elementInView.filter(elem => elem !== 'work')
+      setElementInView(removeElem)
+      // document.querySelector('.work').ariaCurrent = false
+    }
+  }, [ref1, inView1])
 
   const projects = [
     {
@@ -106,7 +124,9 @@ const Work = ({
       </AnimatePresence>
 
       <h1 className='section-title'>PROJECTS</h1>
-      <div className='project-holder'>{projectCard}</div>
+      <div ref={ref1} className='project-holder'>
+        {projectCard}
+      </div>
     </motion.section>
   )
 }

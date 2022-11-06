@@ -2,11 +2,12 @@ import './About.css'
 import { filterProps, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
-import { useRef, useState } from 'react'
+import { useRef, useState, useCallback } from 'react'
 
-const About = () => {
+const About = ({ setElementInView, elementInView }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
+  const [ref1, inView1] = useInView()
 
   const boxVariantLeft = {
     visible: { x: 0, opacity: 1 },
@@ -19,19 +20,30 @@ const About = () => {
   }
 
   useEffect(() => {
-    // console.log(inView)
     if (inView) {
       control.start('visible')
-      document.querySelector('.about').ariaCurrent = 'page'
-      document.querySelector('.work').ariaCurrent = false
-      document.querySelector('.home').ariaCurrent = false
-      document.querySelector('.contact').ariaCurrent = false
     }
   }, [control, inView])
 
+  useEffect(() => {
+    if (inView1) {
+      console.log('im in view about')
+      // document.querySelector('.about').ariaCurrent = 'page'
+      // document.querySelector('.work').ariaCurrent = false
+      // document.querySelector('.home').ariaCurrent = false
+      // document.querySelector('.contact').ariaCurrent = false
+      setElementInView(prev => [...prev, 'about'])
+    } else {
+      console.log('im not in viw about')
+      let removeElem = elementInView.filter(elem => elem !== 'about')
+      setElementInView(removeElem)
+      // document.querySelector('.about').ariaCurrent = false
+    }
+  }, [inView1])
+
   return (
     <div id='about' className='about-screen'>
-      <h1 className='section-title'> ABOUT</h1>
+      <h1 className='section-title'>ABOUT</h1>
 
       <motion.section
         ref={ref}
@@ -45,7 +57,7 @@ const About = () => {
         // transition={{ type: "easeIn", duration: .15, delay: .50}}
         className='about-wrapper'
       >
-        <img className='about-image' src='../../../../picture.png' />
+        <img ref={ref1} className='about-image' src='../../../../picture.png' />
         <motion.section
           ref={ref}
           variants={boxVariantRight}

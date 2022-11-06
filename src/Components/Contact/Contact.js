@@ -2,27 +2,34 @@ import './Contact.css'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 
-const Contact = () => {
+const Contact = ({ setElementInView, elementInView }) => {
   const [ref, inView] = useInView()
 
   useEffect(() => {
     if (inView) {
-      document.querySelector('.contact').ariaCurrent = 'page'
-      document.querySelector('.work').ariaCurrent = false
-      document.querySelector('.home').ariaCurrent = false
-      document.querySelector('.about').ariaCurrent = false
+      console.log('CONTACT')
+      setElementInView(prev => [...prev, 'contact'])
+
+      // document.querySelector('.contact').ariaCurrent = 'page'
+      // document.querySelector('.work').ariaCurrent = false
+      // document.querySelector('.home').ariaCurrent = false
+      // document.querySelector('.about').ariaCurrent = false
     } else {
-      document.querySelector('.contact').ariaCurrent = false
-      document.querySelector('.work').ariaCurrent = 'page'
+      // document.querySelector('.contact').ariaCurrent = false
+      // document.querySelector('.work').ariaCurrent = 'page'
+      let removeElem = elementInView.filter(elem => elem !== 'contact')
+      setElementInView(removeElem)
     }
   }, [inView])
-  
+
   return (
     <>
       <section id='hexagon'>
         <section id='contact' className='contact-wrapper'>
           <div className='space'></div>
-          <h1 className='section-title'>CONTACT</h1>
+          <h1 ref={ref} className='section-title'>
+            CONTACT
+          </h1>
           <p ref={ref}> Have a question or want to work together?</p>
           <p>
             Shoot me an <a href='mailto:emilikaiman@gmail.com'>email.</a>
