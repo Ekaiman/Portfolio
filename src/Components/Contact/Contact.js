@@ -7,16 +7,8 @@ const Contact = ({ setElementInView, elementInView }) => {
 
   useEffect(() => {
     if (inView) {
-      console.log('CONTACT')
       setElementInView(prev => [...prev, 'contact'])
-
-      // document.querySelector('.contact').ariaCurrent = 'page'
-      // document.querySelector('.work').ariaCurrent = false
-      // document.querySelector('.home').ariaCurrent = false
-      // document.querySelector('.about').ariaCurrent = false
     } else {
-      // document.querySelector('.contact').ariaCurrent = false
-      // document.querySelector('.work').ariaCurrent = 'page'
       let removeElem = elementInView.filter(elem => elem !== 'contact')
       setElementInView(removeElem)
     }

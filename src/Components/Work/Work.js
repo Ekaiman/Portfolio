@@ -31,18 +31,12 @@ const Work = ({
   useEffect(() => {
     if (inView1) {
       console.log('WORK')
-      // document.querySelector('.work').ariaCurrent = 'page'
-      // document.querySelector('.about').ariaCurrent = false
-      // document.querySelector('.home').ariaCurrent = false
-      // document.querySelector('.contact').ariaCurrent = false
       setElementInView(prev => [...prev, 'work'])
     }
-
     if (!inView1) {
       console.log('not in view WORK')
       let removeElem = elementInView.filter(elem => elem !== 'work')
       setElementInView(removeElem)
-      // document.querySelector('.work').ariaCurrent = false
     }
   }, [ref1, inView1])
 

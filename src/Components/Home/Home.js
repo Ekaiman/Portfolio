@@ -15,15 +15,8 @@ const Home = ({ setElementInView, elementInView }) => {
 
   useEffect(() => {
     if (inView) {
-      // document.querySelector('.home').ariaCurrent = 'page'
-      // document.querySelector('.work').ariaCurrent = false
-      // document.querySelector('.about').ariaCurrent = false
-      // document.querySelector('.contact').ariaCurrent = false
       setElementInView(prev => [...prev, 'home'])
-
     } else {
-      // document.querySelector('.home').ariaCurrent = false
-      // document.querySelector('.about').ariaCurrent = 'page'
       let removeElem = elementInView.filter(elem => elem !== 'home')
       setElementInView(removeElem)
     }

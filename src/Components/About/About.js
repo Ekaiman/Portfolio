@@ -27,17 +27,10 @@ const About = ({ setElementInView, elementInView }) => {
 
   useEffect(() => {
     if (inView1) {
-      console.log('im in view about')
-      // document.querySelector('.about').ariaCurrent = 'page'
-      // document.querySelector('.work').ariaCurrent = false
-      // document.querySelector('.home').ariaCurrent = false
-      // document.querySelector('.contact').ariaCurrent = false
       setElementInView(prev => [...prev, 'about'])
     } else {
-      console.log('im not in viw about')
       let removeElem = elementInView.filter(elem => elem !== 'about')
       setElementInView(removeElem)
-      // document.querySelector('.about').ariaCurrent = false
     }
   }, [inView1])
 
