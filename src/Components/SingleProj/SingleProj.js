@@ -4,18 +4,27 @@ import Modal from '../Modal/Modal'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
-
-const SingleProj = ({ control,  inView, index, title, img, lang, gitHub, showModal, setSelectedProj, overview }) => {
+const SingleProj = ({
+  control,
+  inView,
+  index,
+  title,
+  img,
+  lang,
+  gitHub,
+  showModal,
+  setSelectedProj,
+  overview
+}) => {
   // const control = useAnimation()
   // const [ref, inView] = useInView()
 
   const boxVariantBottom = {
     visible: { y: 0, opacity: 1, scale: 1 },
-    hidden: { y: 200, opacity: 0, scale: .4 }
+    hidden: { y: 200, opacity: 0, scale: 0.4 }
   }
 
   // console.log(control)
-  
 
   // useEffect(() => {
   //   console.log(inView, 'yes')
@@ -30,12 +39,20 @@ const SingleProj = ({ control,  inView, index, title, img, lang, gitHub, showMod
         variants={boxVariantBottom}
         initial='hidden'
         animate={control}
-        transition={{ ease: 'easeIn', duration: .2, delay: index - (index * .8) }}
+        transition={{
+          ease: 'easeIn',
+          duration: 0.2,
+          delay: index - index * 0.8
+        }}
         className='container'
       >
         <img className='project-image' src={img} />
-        <div
-         
+        <motion.div
+          // initial={{scale: 2}}
+          // whileHover={{
+          //   scale: 1,
+          //   transition: { duration: 1 }
+          // }}
           className='middle'
         >
           {/* <button
@@ -52,8 +69,10 @@ const SingleProj = ({ control,  inView, index, title, img, lang, gitHub, showMod
           >
             Learn More
           </button> */}
-          <h1>{title}</h1>
-          <p>{lang}</p>
+          <div>
+            <h1 className='middle-title'>{title}</h1>
+            <p className='middle-lang'>{lang}</p>
+          </div>
           <button
             className='button-6'
             role='button'
@@ -70,7 +89,7 @@ const SingleProj = ({ control,  inView, index, title, img, lang, gitHub, showMod
           >
             Learn More
           </button>
-        </div>
+        </motion.div>
       </motion.div>
     </>
   )

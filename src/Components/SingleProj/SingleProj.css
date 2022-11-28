@@ -1,10 +1,14 @@
 .container {
+  /* border: solid brown; */
   width: 50%;
   position: relative;
   transition-duration: 1s;
+  /* border: solid green; */
+  position: relative;
 }
 @media only screen and (max-width: 768px) {
   .container {
+    /* border:solid orange; */
     width: 100%;
     transition-duration: 1s;
   }
@@ -18,28 +22,61 @@
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  /* border: solid pink; */
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    /* border: solid red; */
+    width: 33.33%;
+    transition-duration: 1s;
+  }
+
+  .project-image::after{
+    content: "something";
+    /* border: solid orange; */
+  }
 }
 
 .container:hover .project-image {
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .container:hover .middle {
   opacity: 1;
 }
 
-.middle {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
+.container:hover + .middle-title {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.text {
+.middle {
+  height: 100%;
+  width: 100%;
+  transition: 1s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  /* -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+  /* border: solid yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-title,
+.middle-lang {
+  margin: 0;
+  transform: translateY(100%);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* .text {
   background-color: #da59d4;
   color: white;
   border: solid #da59d4;
@@ -54,4 +91,54 @@
   transition-duration: 2s;
   cursor: pointer;
 
+} */
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  margin-top: 12%;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }

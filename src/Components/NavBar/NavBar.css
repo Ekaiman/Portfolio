@@ -9,6 +9,8 @@ li {
   background-color: #1b2430;
   margin: 0px;
   z-index: 9;
+  border-radius: 0 5 5 0;
+  border-color: aqua;
 }
 
 .nav-items {
@@ -33,6 +35,6 @@ li {
   font-weight: 700;
   text-decoration: underline; */
   color: hotpink;
-  /* transition-delay: 1s; */
+  transition-delay: .3s;
   transition-duration: 2s;
 }
