@@ -1,11 +1,11 @@
 .about-screen {
   /* border: solid blue; */
-  height: 100vh;
+  height: 105vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
 }
 
 .about-wrapper {
