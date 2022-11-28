@@ -15,8 +15,6 @@ const Contact = ({ setElementInView, elementInView }) => {
   }, [inView])
 
   return (
-    <>
-      <section id='hexagon'>
         <section id='contact' className='contact-wrapper'>
           <div className='space'></div>
           <h1 ref={ref} className='section-title'>
@@ -54,8 +52,6 @@ const Contact = ({ setElementInView, elementInView }) => {
             </a>
           </footer>
         </section>
-      </section>
-    </>
   )
 }
 

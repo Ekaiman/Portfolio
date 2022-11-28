@@ -3,7 +3,8 @@ import './Work.css'
 import Modal from '../Modal/Modal'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import ProjectFilter from '../ProjectFilter/ProjectFilter'
 
 const Work = ({
   showModal,
@@ -15,13 +16,15 @@ const Work = ({
   gitHub,
   overview,
   setElementInView,
-  elementInView
+  elementInView,
+  projects
 }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
-
   const [ref1, inView1] = useInView()
-
+  const [showingProjects, setShowingProjects]
+    = useState(projects)
+  
   useEffect(() => {
     if (inView) {
       control.start('visible')
@@ -40,53 +43,7 @@ const Work = ({
     }
   }, [ref1, inView1])
 
-  const projects = [
-    {
-      id: 2,
-      title: 'Roll For Initiative',
-      img: '../../../../project_imgs/dnd.png',
-      gitHub: 'https://github.com/jskomal/roll-for-initiative',
-      overview:
-        'Roll For Initiative is a chance style combat game featuring the mythical monster and courageous herse from the Dungens and Dragons (DnD) universe. Written in React and TypeScript.',
-      lang: 'React/TypeScript'
-    },
-    {
-      id: 1,
-      title: 'DiverCity',
-      img: '../../../../project_imgs/divercity.png',
-      gitHub: 'https://github.com/Capstone-LGBTQ-BIPOC/FE_DiverCity',
-      overview: 'Divercity',
-      lang: 'React'
-    },
-    {
-      id: 3,
-      title: 'Tic Tac Toe',
-      img: '../../../../project_imgs/tictac.png',
-      gitHub: 'https://github.com/Ekaiman/tic-tac-toe',
-      overview:
-        'Tic Tac Toe allows for users to play a game that automatically asses for a win or draw. Written in vanilla JavaScript.',
-      lang: 'Vanilla JS'
-    },
-    {
-      id: 5,
-      title: 'Randcid Tomatillos',
-      img: '../../../../project_imgs/rancid.png',
-      gitHub: 'https://github.com/Ekaiman/Rancid_Tomatillos',
-      overview:
-        'Rancid tomatillos was a project built to learn React and dynamic routing. ',
-      lang: 'React'
-    },
-    {
-      id: 4,
-      title: 'Travel Tracker',
-      img: '../../../../project_imgs/travel.png',
-      gitHub: 'https://github.com/Ekaiman/travelTracker',
-      overview: '',
-      lang: 'Vanilla JS'
-    }
-  ]
-
-  const projectCard = projects.map((proj, index) => {
+  const projectCard = showingProjects.map((proj, index) => {
     return (
       <SingleProj
         inView={inView}
@@ -105,23 +62,27 @@ const Work = ({
   })
 
   return (
-    <motion.section ref={ref} id='work' className='work-wrapper'>
-      <AnimatePresence initial={false}>
-        <Modal
-          show={showing}
-          closeModal={closeModal}
-          title={title}
-          img={img}
-          gitHub={gitHub}
-          overview={overview}
-        />
-      </AnimatePresence>
+    <>
+      <motion.section ref={ref} id='work' className='work-wrapper'>
+        <AnimatePresence initial={false}>
+          <Modal
+            show={showing}
+            closeModal={closeModal}
+            title={title}
+            img={img}
+            gitHub={gitHub}
+            overview={overview}
+          />
+        </AnimatePresence>
 
-      <h1 className='section-title'>PROJECTS</h1>
-      <div ref={ref1} className='project-holder'>
-        {projectCard}
-      </div>
-    </motion.section>
+        <h1 className='section-title'>PROJECTS</h1>
+        {/* <ProjectFilter projects={projects} setShowingProjects={setShowingProjects} showingProjects={showingProjects} /> */}
+        <div ref={ref1} className='project-holder'>
+          {projectCard}
+        </div>
+      </motion.section>
+      <section className='hexagon'></section>
+    </>
   )
 }
 
