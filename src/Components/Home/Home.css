@@ -7,6 +7,7 @@
   align-items: center;
   animation: slide-in 1s linear;
   background-color: #252934;
+  border: solid #252934;
 }
 
 /* @keyframes slide-in {
@@ -22,21 +23,54 @@
   text-decoration: none;
   color: inherit;
   border: solid rgb(255, 255, 255);
-  padding: 2%;
+  /* padding: 2%; */
   transition-duration: 0.7s;
   color: white;
-  margin-top: 2vh;
+  margin-top: 25px;
+  padding: 20px;
+  /* border: solid green; */
 }
 
 .view-work-button:hover {
   background-color: #3eb2b2;
-  border:solid #3eb2b2;
- 
+  border: solid #3eb2b2;
 }
 
-.home-text{
+.home-text {
   color: white;
   font-size: 5vh;
   font-weight: 250;
   margin: 0%;
+  
+}
+
+
+
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #166198 0%,
+    #0cc5c8 29%,
+    #16c48a 67%,
+    #e5df22 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 6vh;
+  font-weight: 600;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
