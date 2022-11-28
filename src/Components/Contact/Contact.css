@@ -25,7 +25,7 @@
 
 #hexagon {
   height: 0vh;
-  background: white;
+  background: #f5f5f5;
   position: relative;
 }
 
@@ -38,7 +38,7 @@
   height: 0;
   border-left: 49vw solid transparent;
   border-right: 49vw solid transparent;
-  border-top: 65.8675px solid rgb(255, 255, 255);
+  border-top: 65.8675px solid#f5f5f5; 
 }
 
 .icons{
