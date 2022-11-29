@@ -13,9 +13,9 @@ function App() {
   const [showing, setShowing] = useState(false)
   const [elementInView, setElementInView] = useState([])
   const [scrollDirection, setScrollDirection] = useState('')
-  
+
   //highlighting current href aria tag
-  useEffect(() => { 
+  useEffect(() => {
     if (elementInView.length === 1 && elementInView.includes('home')) {
       document.querySelector('.home').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
@@ -31,14 +31,16 @@ function App() {
       document.querySelector('.about').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.contact').ariaCurrent = false
-    } else if (elementInView.length === 1 && elementInView.includes('contact')) {
+    } else if (
+      elementInView.length === 1 &&
+      elementInView.includes('contact')
+    ) {
       document.querySelector('.contact').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
     } else if (elementInView.length > 1) {
       document.querySelector('.contact').ariaCurrent = elementInView[1]
-      
     }
   }, [elementInView])
 
@@ -47,7 +49,13 @@ function App() {
     {
       id: 2,
       title: 'Roll For Initiative',
-      img: '../../../../project_imgs/dnd.png',
+      img: [
+        '../../../../project_imgs/dnd1.png',
+        '../../../../project_imgs/dnd2.png',
+        '../../../../project_imgs/dnd3.png',
+        '../../../../project_imgs/dnd4.png',
+        '../../../../project_imgs/dnd5.png'
+      ],
       gitHub: 'https://github.com/jskomal/roll-for-initiative',
       overview:
         'Roll For Initiative is a chance style combat game featuring the mythical monster and courageous herse from the Dungens and Dragons (DnD) universe. Written in React and TypeScript.',
@@ -56,7 +64,11 @@ function App() {
     {
       id: 1,
       title: 'DiverCity',
-      img: '../../../../project_imgs/divercity.png',
+      img: [
+        '../../../../project_imgs/divercity1.png',
+        '../../../../project_imgs/divercity2.png',
+        '../../../../project_imgs/divercity3.png'
+      ],
       gitHub: 'https://github.com/Capstone-LGBTQ-BIPOC/FE_DiverCity',
       overview: 'Divercity',
       lang: 'React / Ruby on Rails'
@@ -64,7 +76,11 @@ function App() {
     {
       id: 3,
       title: 'Tic Tac Toe',
-      img: '../../../../project_imgs/tictac.png',
+      img: [
+        '../../../../project_imgs/tictac1.png',
+        '../../../../project_imgs/tictac2.png',
+        '../../../../project_imgs/tictac3.png'
+      ],
       gitHub: 'https://github.com/Ekaiman/tic-tac-toe',
       overview:
         'Tic Tac Toe allows for users to play a game that automatically asses for a win or draw. Written in vanilla JavaScript.',
@@ -73,7 +89,11 @@ function App() {
     {
       id: 5,
       title: 'Randcid Tomatillos',
-      img: '../../../../project_imgs/rancid.png',
+      img: [
+        '../../../../project_imgs/rancid1.png',
+        '../../../../project_imgs/rancid2.png',
+        '../../../../project_imgs/rancid3.png'
+      ],
       gitHub: 'https://github.com/Ekaiman/Rancid_Tomatillos',
       overview:
         'Rancid tomatillos was a project built to learn React and dynamic routing. ',
@@ -82,17 +102,16 @@ function App() {
     {
       id: 4,
       title: 'Travel Tracker',
-      img: '../../../../project_imgs/travel.png',
+      img: ['../../../../project_imgs/travel1.png'],
       gitHub: 'https://github.com/Ekaiman/travelTracker',
       overview: '',
       lang: 'Vanilla JS'
     }
   ]
 
-
   const [selectedProj, setSelectedProj] = useState({
     title: '',
-    img: '',
+    img: [],
     gitHub: '',
     overview: ''
   })
@@ -103,19 +122,18 @@ function App() {
 
   const closeModal = () => {
     setShowing(false)
-    setSelectedProj({ title: '', img: '', gitHub: '', overview: '' })
+    setSelectedProj({ title: '', img: [], gitHub: '', overview: '' })
   }
 
   const [y, setY] = useState(window.scrollY)
   const [innerHeight, setInnerHeight] = useState(window.innerHeight)
 
-  
-  const onResize = () => { 
+  const onResize = () => {
     setInnerHeight(window.innerHeight)
   }
 
   window.addEventListener('resize', onResize)
-  
+
   const handleNavigation = useCallback(
     e => {
       const window = e.currentTarget
