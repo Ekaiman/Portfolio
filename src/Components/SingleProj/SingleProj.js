@@ -14,7 +14,8 @@ const SingleProj = ({
   gitHub,
   showModal,
   setSelectedProj,
-  overview
+  overview,
+  description
 }) => {
 
 
@@ -84,7 +85,8 @@ const SingleProj = ({
                 title: title,
                 img: img,
                 gitHub: gitHub,
-                overview: overview
+                overview: overview,
+                description: description
               })
             }}
           >

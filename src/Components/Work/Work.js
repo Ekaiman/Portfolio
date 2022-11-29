@@ -17,8 +17,10 @@ const Work = ({
   overview,
   setElementInView,
   elementInView,
-  projects
+  projects,
+  description
 }) => {
+  
   const control = useAnimation()
   const [ref, inView] = useInView()
   const [ref1, inView1] = useInView()
@@ -57,6 +59,7 @@ const Work = ({
         control={control}
         lang={proj.lang}
         key={proj.id}
+        description={proj.description}
       />
     )
   })
@@ -72,6 +75,7 @@ const Work = ({
             img={img}
             gitHub={gitHub}
             overview={overview}
+            description={description}
           />
         </AnimatePresence>
 

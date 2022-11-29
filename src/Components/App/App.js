@@ -59,7 +59,8 @@ function App() {
       gitHub: 'https://github.com/jskomal/roll-for-initiative',
       overview:
         'Roll For Initiative is a chance style combat game featuring the mythical monster and courageous herse from the Dungens and Dragons (DnD) universe. Written in React and TypeScript.',
-      lang: 'React / TypeScript'
+      lang: 'React / TypeScript',
+      description: 'Game'
     },
     {
       id: 1,
@@ -69,9 +70,11 @@ function App() {
         '../../../../project_imgs/divercity2.png',
         '../../../../project_imgs/divercity3.png'
       ],
-      gitHub: 'https://github.com/Capstone-LGBTQ-BIPOC/FE_DiverCity',
-      overview: 'Divercity',
-      lang: 'React / Ruby on Rails'
+      gitHub: 'https://github.com/Capstone-LGBTQ-BßIPOC/FE_DiverCity',
+      overview:
+        'DiverCity is a resource to browse and discover LGBTQ+ and BIPOC owned businesses. This application with built using React, React Context API for global state management and Cypress for End-to-End testing automated with CircleCI.',
+      lang: 'React / Ruby on Rails',
+      description: 'Busniess Guide'
     },
     {
       id: 3,
@@ -84,7 +87,8 @@ function App() {
       gitHub: 'https://github.com/Ekaiman/tic-tac-toe',
       overview:
         'Tic Tac Toe allows for users to play a game that automatically asses for a win or draw. Written in vanilla JavaScript.',
-      lang: 'Vanilla JS'
+      lang: 'Vanilla JS',
+      description: 'Game'
     },
     {
       id: 5,
@@ -96,16 +100,19 @@ function App() {
       ],
       gitHub: 'https://github.com/Ekaiman/Rancid_Tomatillos',
       overview:
-        'Rancid tomatillos was a project built to learn React and dynamic routing. ',
-      lang: 'React'
+        'Rancid tomatillos was a project built to learn React, Cypress, and dynamic routing. ',
+      lang: 'React',
+      description: 'Movie Ratings'
     },
     {
       id: 4,
       title: 'Travel Tracker',
       img: ['../../../../project_imgs/travel1.png'],
       gitHub: 'https://github.com/Ekaiman/travelTracker',
-      overview: '',
-      lang: 'Vanilla JS'
+      overview:
+        'Travel Tracker was built so users can record past, pending and upcoming trips. Built in Vanilla JavaScript, Mocha and Chai was used for end to end testing. ',
+      lang: 'Vanilla JS',
+      description: 'Travel Iternerary'
     }
   ]
 
@@ -113,7 +120,8 @@ function App() {
     title: '',
     img: [],
     gitHub: '',
-    overview: ''
+    overview: '',
+    description: '',
   })
 
   const showModal = () => {
@@ -185,6 +193,7 @@ function App() {
         setElementInView={setElementInView}
         elementInView={elementInView}
         projects={projects}
+        description={selectedProj.description}
       />
       <Contact
         setElementInView={setElementInView}
