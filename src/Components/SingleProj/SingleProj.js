@@ -16,13 +16,14 @@ const SingleProj = ({
   setSelectedProj,
   overview
 }) => {
-  // const control = useAnimation()
-  // const [ref, inView] = useInView()
+
 
   const boxVariantBottom = {
     visible: { y: 0, opacity: 1, scale: 1 },
     hidden: { y: 200, opacity: 0, scale: 0.4 }
   }
+
+  
 
   // console.log(control)
 
@@ -46,7 +47,7 @@ const SingleProj = ({
         }}
         className='container'
       >
-        <img className='project-image' src={img} />
+        <img className='project-image' src={img[0]} />
         <motion.div
           // initial={{scale: 2}}
           // whileHover={{
