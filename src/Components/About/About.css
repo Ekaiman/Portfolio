@@ -3,9 +3,13 @@
   height: 105vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
+}
+
+.about-title{
+  margin-bottom: 20vh;
 }
 
 .about-wrapper {
