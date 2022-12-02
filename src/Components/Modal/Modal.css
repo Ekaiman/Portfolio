@@ -2,7 +2,6 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  /* border: solid hotpink; */
   z-index: 10;
   position: fixed;
   top: 0;
@@ -12,44 +11,96 @@
 }
 
 .modal-holder {
-  /* border: solid green; */
-  position: fixed;
   z-index: 10;
-  height: 600px;
+  height: 700px;
   width: 600px;
-  position: fixed;
   top: 0;
   margin-top: 10%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  /* transition-duration: 4s; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3vh;
 }
-@media only screen and (max-width: 695px) {
-  .modal-holder{
-    /* border: solid red; */
-    width: 300px;
-    height: 500px;
-    /* margin-top: 30vw; */
-  }
-}
-
-/* .modal-image {
-  max-height: 70%;
-} */
 
 .image-in-modal {
   height: 100%;
   width: 100%;
+  border-bottom: solid black;
+  margin-bottom: 0%;
+}
+
+.next-button {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.next-button-outside{
+  border: solid yellow;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  top: -50px;
+}
+
+@media only screen and (max-width: 695px) {
+  .modal-holder {
+    border: solid red;
+    width: 500px;
+    height: 600px;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .modal-holder {
+    border: solid purple;
+    width: 300px;
+    height: 500px;
+    margin-top: 10%;
+  }
+
+  .image-in-modal {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-height: 830px) {
+  .modal-holder {
+    width: 550px;
+    height: 625px;
+    margin-top: 5%;
+  }
+
+  .image-in-modal {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-height: 637px) {
+  .modal-holder {
+    border: solid purple;
+    width: 300px;
+    height: 500px;
+    margin-top: 10%;
+  }
+}
+
+
+.image-holder {
+  border: solid yellow;
 }
 
 .overview-holder {
-  /* border: solid yellow; */
   max-width: 99%;
+  margin-top: 0%;
+  position: relative;
 }
 
 hr {
@@ -58,11 +109,23 @@ hr {
 }
 
 .title {
-  color: #595959;
+  color: #444444;
+  font-size: 25px;
+  margin: 0;
+}
+
+.description {
+  color: #9c9c9c;
+  font-size: 17px;
+  margin-top: 0;
 }
 
 .overview {
   color: #595959;
+}
+
+.modal-content-holder {
+  padding: 10px;
 }
 
 .gitHub-button {
@@ -73,7 +136,6 @@ hr {
   background: #4e9caf;
   padding: 10px;
   text-align: center;
-  /* border-radius: 5px; */
   color: white;
   font-weight: bold;
   line-height: 25px;
@@ -89,6 +151,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .close {
@@ -101,7 +164,7 @@ hr {
   border-radius: 50%;
   background: transparent;
   color: #4e9caf;
-
+  
   font: inherit;
   text-indent: 100%;
   cursor: pointer;
@@ -134,3 +197,5 @@ hr {
 .close:after {
   transform: rotate(-45deg);
 }
+
+/* arrow buttons */
