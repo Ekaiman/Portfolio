@@ -85,7 +85,7 @@ const Work = ({
           {projectCard}
         </div>
       </motion.section>
-      <section className='hexagon'></section>
+      {/* <section className='hexagon'></section> */}
     </>
   )
 }
