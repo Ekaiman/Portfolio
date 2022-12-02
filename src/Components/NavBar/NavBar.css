@@ -14,7 +14,8 @@ li {
 }
 
 .nav-items {
-  /* border: solid yellow; */
+  border: solid #3eb2b2;
+  border-width: 0px 0px 4px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
