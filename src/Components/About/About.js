@@ -36,14 +36,14 @@ const About = ({ setElementInView, elementInView }) => {
 
   return (
     <div id='about' className='about-screen'>
-      <h1 className='section-title'>ABOUT</h1>
+      <h1 className='section-title about-title'>ABOUT</h1>
 
       <motion.section
         ref={ref}
         variants={boxVariantLeft}
         initial='hidden'
         animate={control}
-        transition={{ ease: 'easeIn', duration: 1, delay: 0.3 }}
+        transition={{ ease: 'easeIn', duration: 1, delay: 0.15 }}
         // viewport={{ once: false }}
         // initial={{ opacity: 0, x: -150 }}
         // whileInView={{ opacity: 1, x: 0 }}
@@ -56,20 +56,22 @@ const About = ({ setElementInView, elementInView }) => {
           variants={boxVariantRight}
           initial='hidden'
           animate={control}
-          transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.5 }}
+          transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
           className='about-items'
         >
           <h2 className='about-words'>
-            I'm Emili, an outdoor entushiast and artist gone Front-End Engineer.
+            I'm Emili: outdoor entushiast, artist, and creative thinker gone
+            Front-End Engineer.
           </h2>
           <h3 className='about-words'>
-            After an accident thats changed my abilities to push my limits
-            outdoors, I've found ways to mentally push limits through software
-            engineering.
+            After a rock climbing accident thats inhibited my abilities to push
+            my physical and mental limits in the outdoors, I've now found ways
+            to mentally push limits in software engineering.
           </h3>
           <h3 className='about-words'>
-            I've spent the last year learning front-end development,
-            specifically vanilla JavaScript, React and TypeScript.
+            Coding has given me the ability to challenge myself, and I'm always
+            up for the challenge. I've spent the last year learning front-end
+            development, specifically vanilla JavaScript, React and TypeScript.
           </h3>
         </motion.section>
       </motion.section>
