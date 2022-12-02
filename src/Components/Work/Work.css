@@ -18,24 +18,39 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
+    margin-bottom: 10vh;
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .project-holder {
-    border: solid green;
+    /* border: solid green; */
     height: 75%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .project-holder {
+    /* border: solid rgb(128, 0, 94); */
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .project-holder {
-    /* border: solid blue; */
+    border: solid blue;
     height: 75%;
-    width: 75%;
+    width: 90%;
     display: flex;
     flex-direction: row;
   }
