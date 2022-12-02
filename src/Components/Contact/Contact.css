@@ -26,3 +26,31 @@
 .icons{
   height: 8vh;
 }
+
+.arrow-container{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  top: 100px;
+  border: solid yellow;
+  height: 60px;
+  width: 40px;
+  text-align: center;
+
+}
+
+.arrow-up{
+  margin:0;
+  padding: 0;
+  font-size: 40px;
+}
+
+.arrow-up:nth-child(2){
+  position: relative;
+  bottom: 34px;
+}
+
+.arrow-up:nth-child(3){
+  position: relative;
+  bottom: 68px;
+}
