@@ -2,7 +2,15 @@ import './Modal.css'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
-const Modal = ({ show, title, img, gitHub, closeModal, overview, description }) => {
+const Modal = ({
+  show,
+  title,
+  img,
+  gitHub,
+  closeModal,
+  overview,
+  description
+}) => {
   let count = 0
 
   const nextImage = () => {
@@ -46,7 +54,7 @@ const Modal = ({ show, title, img, gitHub, closeModal, overview, description }) 
           {/* </div> */}
           <section className='overview-holder'>
             {img.length > 1 && (
-              <div className='next-back-holder'>
+              <>
                 <button
                   className='back-button'
                   onClick={() => {
@@ -62,9 +70,9 @@ const Modal = ({ show, title, img, gitHub, closeModal, overview, description }) 
                     nextImage()
                   }}
                 >
-                  NEXT
+                  next
                 </button>
-              </div>
+              </>
             )}
 
             <div className='modal-content-holder'>
