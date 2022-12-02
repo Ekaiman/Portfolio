@@ -55,23 +55,23 @@ const Modal = ({
           <section className='overview-holder'>
             {img.length > 1 && (
               <>
-                <button
+                <a
                   className='back-button'
                   onClick={() => {
                     backImage()
                   }}
                 >
-                  BACK
-                </button>
+                  &#8249;
+                </a>
 
-                <button
+                <a
                   className='next-button'
                   onClick={() => {
                     nextImage()
                   }}
                 >
-                  next
-                </button>
+                  &#8250;
+                </a>
               </>
             )}
 
