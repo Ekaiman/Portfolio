@@ -32,7 +32,8 @@
   text-decoration: none;
   color: white;
   top: 100px;
-  border: solid yellow;
+  /* border: solid yellow; */
+  background-color: #3eb2b2;;
   height: 60px;
   width: 40px;
   text-align: center;
