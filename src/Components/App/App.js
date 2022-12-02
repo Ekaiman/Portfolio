@@ -2,7 +2,7 @@ import NavBar from '../NavBar/NavBar'
 import Work from '../Work/Work'
 import Home from '../Home/Home'
 import About from '../About/About'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, Profiler } from 'react'
 import './App.css'
 import Contact from '../Contact/Contact'
 import React from 'react'
@@ -13,6 +13,10 @@ function App() {
   const [showing, setShowing] = useState(false)
   const [elementInView, setElementInView] = useState([])
   const [scrollDirection, setScrollDirection] = useState('')
+
+  // const logTimes = (id, phase, actualTime, baseTime, startTime, commitTime) => {
+  //   console.table({ id, phase, actualTime, baseTime, startTime, commitTime })
+  // }
 
   //highlighting current href aria tag
   useEffect(() => {
@@ -121,7 +125,7 @@ function App() {
     img: [],
     gitHub: '',
     overview: '',
-    description: '',
+    description: ''
   })
 
   const showModal = () => {
@@ -181,20 +185,21 @@ function App() {
         elementInView={elementInView}
       />
       {/* (<Modal show={showing} closeModal={closeModal} title={selectedProj.title} img={selectedProj.img} github ={selectedProj.gitHub} /> */}
-      <Work
-        showModal={showModal}
-        setSelectedProj={setSelectedProj}
-        showing={showing}
-        closeModal={closeModal}
-        title={selectedProj.title}
-        img={selectedProj.img}
-        gitHub={selectedProj.gitHub}
-        overview={selectedProj.overview}
-        setElementInView={setElementInView}
-        elementInView={elementInView}
-        projects={projects}
-        description={selectedProj.description}
-      />
+        <Work
+          showModal={showModal}
+          setSelectedProj={setSelectedProj}
+          showing={showing}
+          closeModal={closeModal}
+          title={selectedProj.title}
+          img={selectedProj.img}
+          gitHub={selectedProj.gitHub}
+          overview={selectedProj.overview}
+          setElementInView={setElementInView}
+          elementInView={elementInView}
+          projects={projects}
+          description={selectedProj.description}
+        />
+    
       <Contact
         setElementInView={setElementInView}
         elementInView={elementInView}
