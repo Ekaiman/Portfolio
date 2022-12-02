@@ -51,9 +51,9 @@
   /* color: white; */
 }
 
-.next-button-outside {
+/* .next-button-outside {
   border: solid yellow;
-}
+} */
 
 .back-button {
   position: absolute;
@@ -69,7 +69,7 @@
 
 @media only screen and (max-width: 695px) {
   .modal-holder {
-    border: solid red;
+    /* border: solid red; */
     width: 500px;
     height: 600px;
     margin-top: 10%;
@@ -78,7 +78,7 @@
 
 @media only screen and (max-width: 550px) {
   .modal-holder {
-    border: solid purple;
+    /* border: solid purple; */
     width: 300px;
     height: 500px;
     margin-top: 10%;
@@ -105,16 +105,16 @@
 
 @media only screen and (max-height: 637px) {
   .modal-holder {
-    border: solid purple;
+    /* border: solid purple; */
     width: 300px;
     height: 500px;
     margin-top: 10%;
   }
 }
 
-.image-holder {
+/* .image-holder {
   border: solid yellow;
-}
+} */
 
 .overview-holder {
   max-width: 99%;
