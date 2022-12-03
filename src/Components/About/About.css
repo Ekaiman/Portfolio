@@ -1,15 +1,16 @@
 .about-screen {
   /* border: solid blue; */
-  height: 105vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background-color: #ffffff;
 }
 
-.about-title{
-  margin-bottom: 20vh;
+.section-title{
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 .about-wrapper {
@@ -17,10 +18,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 15px;
 }
 
 .about-image {
   height: 35vh;
+  margin-bottom: 40px;
 }
 
 .about-underline {
