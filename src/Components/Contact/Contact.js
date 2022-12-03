@@ -1,6 +1,10 @@
 import './Contact.css'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faGoogle, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 
 const Contact = ({ setElementInView, elementInView }) => {
   const [ref, inView] = useInView()
@@ -29,8 +33,47 @@ const Contact = ({ setElementInView, elementInView }) => {
         <p className='arrow-up'>^</p>
         <p className='arrow-up'>^</p>
       </a>
-      <footer className='contact-links'>
-        <a
+
+      {/* <footer className='contact-links'> */}
+        <ul className='contact-links'>
+          <li>
+            <a
+              className='socials'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://www.linkedin.com/in/emilikaiman/'
+            >
+              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
+              <FontAwesomeIcon icon={faLinkedinIn} className='icon' />
+              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
+            </a>
+          </li>
+          <li>
+            <a
+              className='socials'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='mailto:emilikaiman@gmail.com'
+            >
+              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
+              <FontAwesomeIcon icon={faGoogle} className='icon' />
+              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
+            </a>
+          </li>
+          <li>
+            <a
+              className='socials'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/Ekaiman'
+            >
+              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
+              <FontAwesomeIcon icon={faGithubAlt} className='icon' />
+              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
+            </a>
+          </li>
+        </ul>
+        {/* <a
           target='_blank'
           rel='noopener noreferrer'
           href='https://github.com/Ekaiman'
@@ -50,8 +93,8 @@ const Contact = ({ setElementInView, elementInView }) => {
           href='mailto:emilikaiman@gmail.com'
         >
           <img className='icons' src='../../../../social-icons/email.png' />
-        </a>
-      </footer>
+        </a> */}
+      {/* </footer> */}
     </section>
   )
 }
