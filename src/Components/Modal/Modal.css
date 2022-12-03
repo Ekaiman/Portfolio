@@ -78,15 +78,19 @@
 
 @media only screen and (max-width: 550px) {
   .modal-holder {
-    /* border: solid purple; */
-    width: 300px;
-    height: 500px;
+    border: solid purple;
+    width: 80vw;
+    /* height: 500px; */
     margin-top: 10%;
   }
 
   .image-in-modal {
     width: 300px;
     height: auto;
+  }
+
+  .next-button, .back-button{
+    top: -120px;
   }
 }
 
@@ -105,7 +109,7 @@
 
 @media only screen and (max-height: 637px) {
   .modal-holder {
-    /* border: solid purple; */
+    border: solid rgb(61, 153, 97);
     width: 300px;
     height: 500px;
     margin-top: 10%;
