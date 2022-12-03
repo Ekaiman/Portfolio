@@ -88,7 +88,7 @@ const Modal = ({
                   href={gitHub}
                 >
                   {' '}
-                  View GitHub
+                  VIEW GITHUB
                 </a>
                 <button
                   className='close'
