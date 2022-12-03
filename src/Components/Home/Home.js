@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import './Home.css'
-import { faArrowsRotate, faHome, faRotate } from '@fortawesome/free-solid-svg-icons'
+import {
+  faArrowsRotate,
+  faHome,
+  faRotate
+} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = ({ setElementInView, elementInView }) => {
@@ -9,10 +13,10 @@ const Home = ({ setElementInView, elementInView }) => {
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 })
   const [currentQuote, setCurrentQuote] = useState(0)
   const emili = [
-    'IS A FRONT-END DEVELOPER',
-    'LOVES THE GREAT OUTDOORS',
-    'IS PASSIONATE ABOUT CHEESE',
-    'IS AN ENTHUSASTIC LEARNER'
+    'A FRONT-END DEVELOPER',
+    'AN OUTDOOR LOVER',
+    'PASSIONATE ABOUT CHEESE',
+    'ENTHUSASTIC LEARNER'
   ]
 
   const changeQuote = () => {
@@ -31,12 +35,11 @@ const Home = ({ setElementInView, elementInView }) => {
   //   setWindowSize({ height: window.innerHeight, width: window.innerWidth })
   // }
 
-  const rotate = () => { 
+  const rotate = () => {
     document.querySelector('.refresh').classList.toggle('rotate')
     setTimeout(() => {
-    document.querySelector('.refresh').classList.toggle('rotate')
-
-     }, 500) 
+      document.querySelector('.refresh').classList.toggle('rotate')
+    }, 500)
   }
 
   const [ref, inView] = useInView()
@@ -58,12 +61,17 @@ const Home = ({ setElementInView, elementInView }) => {
       id='home'
       className='home-wrapper'
     >
-      <div className='text-holder'>
-        <h1 ref={ref} className='home-text '>
-          <span className='animate-character'>Emili</span>
-        </h1>
-        <h1 className='home-text'>KAIMAN </h1>
-        <h1 className='home-text'>{emili[currentQuote]}</h1>
+      <div className='all-home-text'>
+        <div className='text-holder'>
+          <h1 ref={ref} className='home-text emili'>
+            EMILI
+          </h1>
+          <h1 className='home-text kaiman'>
+            KAIMAN
+          </h1>
+          {/* <h1 className='home-text'>KAIMAN:</h1> */}
+        </div>
+        <h1 className='home-text quote'>{emili[currentQuote]}</h1>
       </div>
       <FontAwesomeIcon
         icon={faArrowsRotate}
@@ -82,7 +90,7 @@ const Home = ({ setElementInView, elementInView }) => {
         }}
       >
         {' '}
-        View my work
+        VIEW MY WORK
       </a>
     </header>
   )
