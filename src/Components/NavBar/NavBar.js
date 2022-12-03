@@ -9,22 +9,22 @@ const NavBar = () => {
         <ul className='nav-items'>
           <li>
             <a className='home nav-button' href='#home'>
-              Home
+              HOME
             </a>
           </li>
           <li>
             <a className='about nav-button' href='#about'>
-              About
+              ABOUT
             </a>
           </li>
           <li>
             <a className='work nav-button' href='#work'>
-              Portfolio
+              PORTFOLIO
             </a>
           </li>
           <li>
             <a className='contact nav-button' href='#contact'>
-              Contact
+              CONTACT
             </a>
           </li>
         </ul>

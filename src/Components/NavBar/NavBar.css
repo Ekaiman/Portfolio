@@ -14,7 +14,7 @@ li {
 }
 
 .nav-items {
-  border: solid #3eb2b2;
+  border: solid #87fffb;
   border-width: 0px 0px 4px 0px;
   display: flex;
   flex-direction: row;
@@ -29,6 +29,8 @@ li {
 .nav-button {
   text-decoration: none;
   color: inherit;
+  font-weight: 400;
+
 }
 
 .nav-button[aria-current='page'] {
