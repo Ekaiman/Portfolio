@@ -60,18 +60,21 @@ const About = ({ setElementInView, elementInView }) => {
           className='about-items'
         >
           <h2 className='about-words'>
-            I'm Emili: outdoor entushiast, artist, and creative thinker gone
+            I'm Emili: outdoor enthusiast, artist, and creative thinker gone
             Front-End Engineer.
           </h2>
           <h3 className='about-words'>
-            After a rock climbing accident thats inhibited my abilities to push
-            my physical and mental limits in the outdoors, I've now found ways
-            to mentally push limits in software engineering.
+            As someone who actively seeks out challenges, I'm excited to be in a
+            career that promotes life long learning and endless opporunities for
+            growth. I thrive in enviorments that require critical thinking and
+            problem solving. I've spent the last year learning front-end
+            development, and specialize in JavaScript, React, TypeScript and see
+            the importance in both end-to-end testing and user flow testing.
           </h3>
           <h3 className='about-words'>
-            Coding has given me the ability to challenge myself, and I'm always
-            up for the challenge. I've spent the last year learning front-end
-            development, specifically vanilla JavaScript, React and TypeScript.
+            I'm located in Denver, CO and in my spare time you'll find me in the
+            outdoors finding ways to get my endorphins pumping, or curled up
+            cuddling my cat named Baby.
           </h3>
         </motion.section>
       </motion.section>
