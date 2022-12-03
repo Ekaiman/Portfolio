@@ -34,10 +34,10 @@
 .arrow-container{
   position: relative;
   text-decoration: none;
-  color: white;
+  color: black;
   /* right: 0; */
   /* border: solid yellow; */
-  background-color: #3eb2b2;;
+  background-color: #87fffb;
   height: 60px;
   width: 40px;
   text-align: center;
@@ -64,6 +64,7 @@
   position: relative;
   bottom: 68px;
 }
+
 
 /* body {
   margin: 0;
