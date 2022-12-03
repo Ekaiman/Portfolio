@@ -19,13 +19,13 @@ const About = ({ setElementInView, elementInView }) => {
   const [play, { stop }] = useSound(soundUrl, { volume: 0.5 })
 
   const emiliAbout = {
-    short: 'Im Emili: creative thinker and problem solver',
+    short: ' creative thinker and problem solver.',
     shortMid:
-      "I'm Emili: creative thinker gone Front-end Engineer.  I know JavaScript and React really well.",
-    mid: "I'm Emili: creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I know JavaScript, React, TypeScript and think E2E and user flow testing is important.",
+      ' creative thinker gone Front-end Engineer.  I know JavaScript and React really well.',
+    mid: ' creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I know JavaScript, React, TypeScript and think E2E and u ser flow testing is important.',
     midLong:
-      "I'm Emili: artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO.",
-    long: "I'm Emili: outdoor enthusiast, artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO and in my spare time you'll find me in the outdoors finding ways to get my endorphins pumping, in a ceramics studio, or curled up cuddling my cat named baby."
+      " artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO.",
+    long: " outdoor enthusiast, artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO and in my spare time you'll find me in the outdoors finding ways to get my endorphins pumping, in a ceramics studio, or curled up cuddling my cat named baby."
   }
 
   const boxVariantLeft = {
@@ -80,66 +80,67 @@ const About = ({ setElementInView, elementInView }) => {
           transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
           className='about-items'
         >
-          <p>Adjust bio length:</p>
-          <div className='bio-length'>
-            <div className='radio-buttons'>
-              <input
-                type='radio'
-                value='short'
-                className='radio-button'
-                name='length'
-                // onMouseEnter={() => { 
-                // }}
-                onClick={() => {
-                  setBioLength('short')
-                  play()
-                }}
-              />
-              <input
-                type='radio'
-                value='shortMid'
-                className='radio-button'
-                name='length'
-                onClick={() => {
-                  setBioLength('shortMid')
-                }}
-              />
-              <input
-                type='radio'
-                value='mid'
-                className='radio-button'
-                name='length'
-                defaultChecked={true}
-                onClick={() => {
-                  setBioLength('mid')
-                }}
-              />
-              <input
-                type='radio'
-                value='midLong'
-                className='radio-button'
-                name='length'
-                onClick={() => {
-                  setBioLength('midLong')
-                }}
-              />
-              <input
-                type='radio'
-                value='long'
-                className='radio-button'
-                name='length'
-                onClick={() => {
-                  setBioLength('long')
-                }}
-              />
+  
+            <p className='adjust-bio-length'>Adjust bio length:</p>
+            <div className='bio-length'>
+              <div className='radio-buttons'>
+                <input
+                  type='radio'
+                  value='short'
+                  className='radio-button'
+                  name='length'
+                  // onMouseEnter={() => {
+                  // }}
+                  onClick={() => {
+                    setBioLength('short')
+                    play()
+                  }}
+                />
+                <input
+                  type='radio'
+                  value='shortMid'
+                  className='radio-button'
+                  name='length'
+                  onClick={() => {
+                    setBioLength('shortMid')
+                  }}
+                />
+                <input
+                  type='radio'
+                  value='mid'
+                  className='radio-button'
+                  name='length'
+                  defaultChecked={true}
+                  onClick={() => {
+                    setBioLength('mid')
+                  }}
+                />
+                <input
+                  type='radio'
+                  value='midLong'
+                  className='radio-button'
+                  name='length'
+                  onClick={() => {
+                    setBioLength('midLong')
+                  }}
+                />
+                <input
+                  type='radio'
+                  value='long'
+                  className='radio-button'
+                  name='length'
+                  onClick={() => {
+                    setBioLength('long')
+                  }}
+                />
+              </div>
+              <div className='short-long'>
+                <p>shortest</p>
+                <p>longest</p>
+              </div>
             </div>
-            <div className='short-long'>
-              <p>shortest</p>
-              <p>longest</p>
-            </div>
-          </div>
-
-          <h2 className='about-words'>{emiliAbout[bioLength]}</h2>
+          <h2 className='intro'>I'm Emili:</h2>
+          <h2 className='about-words intro'>{emiliAbout[bioLength]}</h2>
         </motion.section>
       </motion.section>
     </div>
