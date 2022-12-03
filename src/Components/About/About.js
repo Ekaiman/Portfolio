@@ -3,12 +3,20 @@ import { filterProps, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 import { useRef, useState, useCallback } from 'react'
+import useSound from 'use-sound'
+// import { faPlay } from '@fortawesome/free-solid-svg-icons'
+
+// import boopSfx from '../../sounds/boop.mp3'
 
 const About = ({ setElementInView, elementInView }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
   const [ref1, inView1] = useInView()
   const [bioLength, setBioLength] = useState('mid')
+
+  const soundUrl = '/sounds/rising-pops.mp3'
+
+  const [play, { stop }] = useSound(soundUrl, { volume: 0.5 })
 
   const emiliAbout = {
     short: 'Im Emili: creative thinker and problem solver',
@@ -24,6 +32,8 @@ const About = ({ setElementInView, elementInView }) => {
     visible: { x: 0, opacity: 1 },
     hidden: { x: -200, opacity: 0 }
   }
+
+  // const [playActive] = useSound('/sounds/pop-down.mp3', { volume: 0.5 })
 
   const boxVariantRight = {
     visible: { x: 0, opacity: 1 },
@@ -76,16 +86,19 @@ const About = ({ setElementInView, elementInView }) => {
               <input
                 type='radio'
                 value='short'
-                className='short'
+                className='radio-button'
                 name='length'
+                // onMouseEnter={() => { 
+                // }}
                 onClick={() => {
                   setBioLength('short')
+                  play()
                 }}
               />
               <input
                 type='radio'
                 value='shortMid'
-                className='shortMid'
+                className='radio-button'
                 name='length'
                 onClick={() => {
                   setBioLength('shortMid')
@@ -94,7 +107,7 @@ const About = ({ setElementInView, elementInView }) => {
               <input
                 type='radio'
                 value='mid'
-                className='mid'
+                className='radio-button'
                 name='length'
                 defaultChecked={true}
                 onClick={() => {
@@ -104,7 +117,7 @@ const About = ({ setElementInView, elementInView }) => {
               <input
                 type='radio'
                 value='midLong'
-                className='midLong'
+                className='radio-button'
                 name='length'
                 onClick={() => {
                   setBioLength('midLong')
@@ -113,7 +126,7 @@ const About = ({ setElementInView, elementInView }) => {
               <input
                 type='radio'
                 value='long'
-                className='long'
+                className='radio-button'
                 name='length'
                 onClick={() => {
                   setBioLength('long')

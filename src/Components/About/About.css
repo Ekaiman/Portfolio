@@ -16,11 +16,12 @@
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   padding-bottom: 15px;
   /* border: solid yellow; */
   min-height: 80vh;
+  width: 100%;
 }
 
 .about-image {
@@ -40,6 +41,11 @@
 .radio-buttons{
   display: flex;
   justify-content: space-between;
+  /* color: pink; */
+}
+
+.radio-buttons:checked:after{
+  size: 30px;
 }
 
 .bio-length{
@@ -51,6 +57,11 @@
 .short-long{
   display: flex;
   justify-content: space-between;
+}
+
+.about-items{
+  /* border: solid yellow; */
+  width: 80%;
 }
 
 @media only screen and (min-width: 1100px) {
