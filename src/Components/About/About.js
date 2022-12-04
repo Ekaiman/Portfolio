@@ -163,6 +163,7 @@ const About = ({ setElementInView, elementInView, play }) => {
         transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
         className='about-me-icons'
         href='#contact'
+        onMouseEnter={() => { play()}}
       >
         <p className='contact-connect'>LETS CONNECT!</p>
         <motion.div
