@@ -1,5 +1,4 @@
 .home-wrapper {
-  /* border: solid green; */
   min-height: 99vh;
   display: flex;
   flex-direction: column;
@@ -12,7 +11,6 @@
 }
 
 .all-home-text {
-  /* border: solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,13 +18,6 @@
   width: 80vw;
   
 }
-
-/* .volume-holder{
-position: absolute;
-z-index: 1;
-top: 0;
-right: 0;
-} */
 
 .volumeMute, .volumePlay{
   font-size: 28px;
@@ -38,35 +29,21 @@ right: 0;
   cursor: pointer;
 }
 
-
-
-/* @keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-} */
-
 .view-work-button {
   text-decoration: none;
   color: inherit;
   border: solid rgb(0, 0, 0);
-  /* padding: 2%; */
   transition-duration: 0.7s;
   color: rgb(0, 0, 0);
   margin-top: 25px;
   padding: 20px;
   font-weight: 800;
-  /* border: solid green; */
 }
 
 .view-work-button:hover {
   background-color: black;
   border: solid black;
   color: #fce74a;
-  /* text-shadow: 1px 1px#252934; */
 }
 
 .home-text {
@@ -84,7 +61,6 @@ right: 0;
 }
 .kaiman{
   font-size: 12vw;
-  /* border: solid red; */
   background-color: black;
   color:#fee743;
   padding: 0px 2vw 0px 2vw;
@@ -100,12 +76,7 @@ right: 0;
   color: white;
   font-size: 40px;
   cursor: pointer;
-  /* transition: all .2s ease-in-out;  */
 }
-
-/* .refresh:hover{
-  transform: scale(1.1); 
-} */
 
 .rotate {
   transform: rotate(180deg);
@@ -127,7 +98,6 @@ right: 0;
   background-size: 200% auto;
   color: #fff;
   background-clip: text;
-  /* text-fill-color: transparent; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;

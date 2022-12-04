@@ -3,12 +3,8 @@ import { useInView } from 'react-intersection-observer'
 import './Home.css'
 import {
   faArrowsRotate,
-  faHome,
-  faRotate,
   faVolumeHigh,
   faVolumeMute,
-  showVolume,
-  setShowVolume
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -19,8 +15,7 @@ const Home = ({
   playWater,
   volumeControll
 }) => {
-  const [windowsize, setWindowSize] = useState({ height: 0, width: 0 })
-  const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 })
+
   const [currentQuote, setCurrentQuote] = useState(0)
   const [volumeOn, setVolumeOn] = useState(true)
   const emili = [
@@ -32,7 +27,6 @@ const Home = ({
   ]
 
   const changeQuote = () => {
-    // console.log(currentQuote)
     let newQuote = currentQuote
     newQuote++
     if (newQuote < emili.length) {
@@ -40,12 +34,7 @@ const Home = ({
     } else {
       setCurrentQuote(0)
     }
-    // console.log(currentQuote)
   }
-  // const handleMouseMove = event => {
-  //   setMouseCoords({ x: event.clientX, y: event.clientY })
-  //   setWindowSize({ height: window.innerHeight, width: window.innerWidth })
-  // }
 
   const rotate = () => {
     document.querySelector('.refresh').classList.toggle('rotate')
@@ -67,9 +56,6 @@ const Home = ({
 
   return (
     <header
-      // onMouseMove={event => {
-      //   handleMouseMove(event)
-      // }}
       id='home'
       className='home-wrapper'
     >
