@@ -6,7 +6,6 @@ import { useRef, useState, useCallback } from 'react'
 import useSound from 'use-sound'
 // import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
-// import boopSfx from '../../sounds/boop.mp3'
 
 const About = ({ setElementInView, elementInView }) => {
   const control = useAnimation()
@@ -14,9 +13,6 @@ const About = ({ setElementInView, elementInView }) => {
   const [ref1, inView1] = useInView()
   const [bioLength, setBioLength] = useState('mid')
 
-  const soundUrl = '/sounds/rising-pops.mp3'
-
-  const [play, { stop }] = useSound(soundUrl, { volume: 0.5 })
 
   const emiliAbout = {
     short: ' creative thinker and problem solver.',
@@ -93,7 +89,6 @@ const About = ({ setElementInView, elementInView }) => {
                   // }}
                   onClick={() => {
                     setBioLength('short')
-                    play()
                   }}
                 />
                 <input
