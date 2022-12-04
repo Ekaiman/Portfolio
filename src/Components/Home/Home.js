@@ -16,7 +16,9 @@ const Home = ({ setElementInView, elementInView }) => {
     'A FRONT-END DEVELOPER',
     'AN OUTDOOR LOVER',
     'PASSIONATE ABOUT CHEESE',
-    'ENTHUSASTIC LEARNER'
+    'ENTHUSASTIC LEARNER',
+    'FRIEND TO ANIMALS',
+    
   ]
 
   const changeQuote = () => {
