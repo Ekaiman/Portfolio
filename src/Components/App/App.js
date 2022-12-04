@@ -10,7 +10,6 @@ import { motion, useAnimation } from 'framer-motion'
 import Modal from '../Modal/Modal'
 import useSound from 'use-sound'
 import boop from '../../sounds/boop.mp3'
-// import woosh from '../../sounds/woosh.mp3'
 import water from '../../sounds/water.mp3'
 
 
@@ -18,20 +17,13 @@ import water from '../../sounds/water.mp3'
 function App() {
   const [showing, setShowing] = useState(false)
   const [elementInView, setElementInView] = useState([])
-  const [scrollDirection, setScrollDirection] = useState('')
-  const [volume, setVolume] = useState(.2)
-  const [play, { stop }] = useSound(boop, { volume })
-  const [showVolume, setShowVolume] = useState(false)
-  
-  // const [playWoosh, { stop }] = useSound(woosh, { volume: 0.5 })
 
+
+  const [volume, setVolume] = useState(.2)
+  const [showVolume, setShowVolume] = useState(false)
+  const [play, { stop }] = useSound(boop, { volume })
   const [playWater, { stopWater }] = useSound(water, { volume })
 
-
-
-  // const logTimes = (id, phase, actualTime, baseTime, startTime, commitTime) => {
-  //   console.table({ id, phase, actualTime, baseTime, startTime, commitTime })
-  // }
 
   const volumeControll = (level) => { 
     setVolume(level)
@@ -160,39 +152,6 @@ function App() {
     setSelectedProj({ title: '', img: [], gitHub: '', overview: '' })
   }
 
-  const [y, setY] = useState(window.scrollY)
-  const [innerHeight, setInnerHeight] = useState(window.innerHeight)
-
-  const onResize = () => {
-    setInnerHeight(window.innerHeight)
-  }
-
-  window.addEventListener('resize', onResize)
-
-  const handleNavigation = useCallback(
-    e => {
-      const window = e.currentTarget
-      if (y > window.scrollY) {
-        // console.log('scrolling up')
-        setScrollDirection('up')
-      } else if (y < window.scrollY) {
-        // console.log('scrolling down')
-        setScrollDirection('down')
-      }
-      setY(window.scrollY)
-    },
-    [y]
-  )
-
-  useEffect(() => {
-    setY(window.scrollY)
-    window.addEventListener('scroll', handleNavigation)
-
-    return () => {
-      window.removeEventListener('scroll', handleNavigation)
-    }
-  }, [handleNavigation])
-
   return (
     <div
       className='app'
@@ -209,14 +168,13 @@ function App() {
         showVolume={showVolume}
         setShowVolume={setShowVolume}
       />
-      {/* {scroll && <NavBar setScroll={setScroll} />} */}
       <NavBar />
       <About
         setElementInView={setElementInView}
         elementInView={elementInView}
         play={play}
       />
-      {/* (<Modal show={showing} closeModal={closeModal} title={selectedProj.title} img={selectedProj.img} github ={selectedProj.gitHub} /> */}
+
       <Work
         showModal={showModal}
         setSelectedProj={setSelectedProj}
