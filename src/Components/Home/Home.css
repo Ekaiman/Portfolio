@@ -1,6 +1,6 @@
 .home-wrapper {
   /* border: solid green; */
-  height: 99vh;
+  min-height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,10 +8,6 @@
   animation: slide-in 1s linear;
   background-color: #fce74a;
   border: solid #252934;
-}
-
-.text-holder {
-  /* border: solid yellow; */
 }
 
 .all-home-text {
@@ -64,14 +60,17 @@
 }
 
 .emili{
-  font-size: 22vw;
+  font-size: 20vw;
+  padding-bottom: 0px;
+  margin: 0;
 }
 .kaiman{
-  font-size: 13vw;
+  font-size: 12vw;
   /* border: solid red; */
   background-color: black;
   color:#fee743;
   padding: 0px 2vw 0px 2vw;
+  margin: 0;
 }
 
 .quote{

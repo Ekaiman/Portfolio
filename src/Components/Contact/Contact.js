@@ -73,6 +73,7 @@ const Contact = ({ setElementInView, elementInView }) => {
             </a>
           </li>
         </ul>
+        
         {/* <a
           target='_blank'
           rel='noopener noreferrer'
