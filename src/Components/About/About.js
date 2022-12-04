@@ -1,9 +1,8 @@
 import './About.css'
-import { filterProps, motion, useAnimation } from 'framer-motion'
+import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
-import { useRef, useState, useCallback } from 'react'
-// import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import {useState} from 'react'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -60,10 +59,6 @@ const About = ({ setElementInView, elementInView, play }) => {
         initial='hidden'
         animate={control}
         transition={{ ease: 'easeIn', duration: 1, delay: 0.15 }}
-        // viewport={{ once: false }}
-        // initial={{ opacity: 0, x: -150 }}
-        // whileInView={{ opacity: 1, x: 0 }}
-        // transition={{ type: "easeIn", duration: .15, delay: .50}}
         className='about-wrapper'
       >
         <img ref={ref1} className='about-image' src='../../../../picture.png' />
@@ -85,8 +80,6 @@ const About = ({ setElementInView, elementInView, play }) => {
                     value='short'
                     className='radio-button'
                     name='length'
-                    // onMouseEnter={() => {
-                    // }}
                     onClick={() => {
                       setBioLength('short')
                     }}
@@ -168,9 +161,7 @@ const About = ({ setElementInView, elementInView, play }) => {
         <p className='contact-connect'>LETS CONNECT!</p>
         <motion.div
           animate={{
-            // scale: [1, 1.2, 1.2, 1, 1],
             translateY: [0, 0, 10, 10, 0]
-            // borderRadius: ['0%', '0%', '50%', '50%', '0%']
           }}
           transition={{
             duration: 1,

@@ -1,9 +1,7 @@
 .about-screen {
-  /* border: solid blue; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   background-color: #ffffff;
 }
@@ -16,13 +14,9 @@
 .about-wrapper {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   padding-bottom: 15px;
-  /* border: solid red; */
-  /* min-height: 80vh; */
   width: 100%;
-  /* padding-top: 40px;; */
 }
 
 
@@ -45,7 +39,6 @@
 }
 
 .about-underline {
-  /* border: solid red; */
   border-width: 0px 0px 3px 0px;
 }
 
@@ -54,15 +47,10 @@
 }
 
 .contact-connect{
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
   font-size: 14px;
 }
 
 .bio-radio-holder{
-  /* border: solid blue;  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +59,6 @@
 .radio-buttons {
   display: flex;
   justify-content: space-between;
-  /* color: pink; */
 }
 
 .radio-buttons:hover,
@@ -84,20 +71,9 @@
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
   transform: scale(1.2);
-  /* font-size: 100px; */
-  /* border: 4.5px solid hotpink; */
-  /* accent-color: hotpink; */
 }
 
-/* .radio-button:checked {
-  accent-color: 1px #ff69b4;
-  border: 0;
-  border: 1px solid #0086D6;
-} */
-
 .bio-length {
-  /* display: flex; */
-  /* border: solid yellow; */
   width: 300px;
 }
 
@@ -113,7 +89,6 @@
 }
 
 .about-items {
-  /* border: solid yellow; */
   width: 80%;
 }
 
@@ -126,8 +101,6 @@
   position: relative;
   text-decoration: none;
   color: black;
-  /* right: 0; */
-  /* border: solid yellow; */
   background-color: #87fffb;
   height: 60px;
   width: 40px;
@@ -148,7 +121,6 @@
   .about-wrapper {
     display: flex;
     flex-direction: row;
-    /* border: solid green; */
     width: 90%;
     padding: 10px;
     align-items: flex-start;
@@ -159,7 +131,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border: solid rgb(0, 157, 255); */
     padding: 2%;
   }
   .about-image {
@@ -175,11 +146,8 @@
 @media only screen and (max-width: 1100px) {
   .about-items {
     width: 80%;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center; */
-    /* border: solid red; */
   }
+
   .intro{
     display: inline;
   }
