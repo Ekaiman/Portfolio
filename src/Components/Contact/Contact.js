@@ -4,7 +4,11 @@ import { useEffect } from 'react'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedinIn, faGoogle, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import {
+  faLinkedinIn,
+  faGoogle,
+  faGithubAlt
+} from '@fortawesome/free-brands-svg-icons'
 
 const Contact = ({ setElementInView, elementInView }) => {
   const [ref, inView] = useInView()
@@ -24,8 +28,12 @@ const Contact = ({ setElementInView, elementInView }) => {
       <h1 ref={ref} className='section-title'>
         CONTACT
       </h1>
-      <p ref={ref}> Have a question or want to work together?</p>
-      <p>
+      <p ref={ref} className='contact-words'>
+        {' '}
+        Have a question or want to work together? Or want to talk ceramics or
+        long distance hiking?
+      </p>
+      <p className='contact-words'>
         Shoot me an <a href='mailto:emilikaiman@gmail.com'>email.</a>
       </p>
       <a href='#home' className='arrow-container'>
@@ -35,7 +43,9 @@ const Contact = ({ setElementInView, elementInView }) => {
       </a>
 
       {/* <footer className='contact-links'> */}
-        <ul className='contact-links'>
+      <ul className='contact-links'>
+        <p className='connect'>CONNECT WITH EMILI:</p>
+        <section className='links'>
           <li>
             <a
               className='socials'
@@ -72,9 +82,10 @@ const Contact = ({ setElementInView, elementInView }) => {
               {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
             </a>
           </li>
-        </ul>
-        
-        {/* <a
+        </section>
+      </ul>
+
+      {/* <a
           target='_blank'
           rel='noopener noreferrer'
           href='https://github.com/Ekaiman'
