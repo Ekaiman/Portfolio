@@ -108,29 +108,6 @@ const Contact = ({ setElementInView, elementInView, play, stop }) => {
           </li>
         </section>
       </ul>
-
-      {/* <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://github.com/Ekaiman'
-        >
-          <img className='icons' src='../../../../social-icons/Octocat.png' />
-        </a>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.linkedin.com/in/emilikaiman/'
-        >
-          <img className='icons' src='../../../../social-icons/li.png' />
-        </a>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='mailto:emilikaiman@gmail.com'
-        >
-          <img className='icons' src='../../../../social-icons/email.png' />
-        </a> */}
-      {/* </footer> */}
     </section>
   )
 }
