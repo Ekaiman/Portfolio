@@ -81,6 +81,7 @@ const Home = ({
           onClick={() => {
             volumeControll(0.2)
             setVolumeOn(true)
+            play()
           }}
         />
  } {volumeOn &&
