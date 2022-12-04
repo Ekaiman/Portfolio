@@ -1,19 +1,14 @@
 .contact-wrapper {
-  /* border: solid pink; */
   height: 96vh;
   background-color: #252935;
   color: white;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
-  /* border: solid yellow; */
-  /* width: 100vw; */
   position: relative;
 }
 
 .contact-links {
-  /* border: solid blue; */
   position: absolute;
   bottom: 0;
   background-color: #1b242f;
@@ -23,12 +18,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   margin: 0;
-  /* border: solid yellow */
 }
+
 .links{
-  /* border: solid rgb(0, 85, 255); */
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -44,21 +37,15 @@
   margin-top: 3vh;
   font-weight: 500;
   font-size: 17px;
-  /* border: solid yellow; */
   text-align: center;
   max-width: 70vw;
 }
 
-/* .icons{
-  height: 8vh;
-} */
 
 .arrow-container{
   position: relative;
   text-decoration: none;
   color: black;
-  /* right: 0; */
-  /* border: solid yellow; */
   background-color: #87fffb;
   height: 60px;
   width: 40px;
@@ -85,25 +72,6 @@
   bottom: 68px;
 }
 
-
-/* body {
-  margin: 0;
-  padding:0;
-  background: #262626;
-} */
-
-/* ul {
-  display: flex;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* ul li {
-  list-style: none;
-} */
-
 .socials{
   width: 60px;
   height: 60px;
@@ -111,9 +79,7 @@
   text-align: center;
   line-height: 60px;
   font-size: 35px;
-  /* margin: 0 10px; */
   display: block;
-  /* border-radius: 50%; */
   position: relative;
   overflow: hidden;
   border: 3px solid #353843;
@@ -159,7 +125,3 @@ ul li:nth-child(2) a:before{
 ul li:nth-child(3) a:before {
   background: #171515;
 }
-
-/* ul li:nth-child(4) a:before {
-  background: #dd4b39;
-} */

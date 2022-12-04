@@ -1,9 +1,7 @@
 import './Contact.css'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedinIn,
   faGoogle,
@@ -47,8 +45,6 @@ const Contact = ({ setElementInView, elementInView, play, stop }) => {
         <p className='arrow-up'>^</p>
         <p className='arrow-up'>^</p>
       </a>
-
-      {/* <footer className='contact-links'> */}
       <ul className='contact-links'>
         <p className='connect'>LETS CONNECT:</p>
         <section className='links'>
@@ -65,9 +61,7 @@ const Contact = ({ setElementInView, elementInView, play, stop }) => {
                 stop()
               }}
             >
-              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faLinkedinIn} className='icon' />
-              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
             </a>
           </li>
           <li>
@@ -83,9 +77,7 @@ const Contact = ({ setElementInView, elementInView, play, stop }) => {
                 stop()
               }}
             >
-              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faGoogle} className='icon' />
-              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
             </a>
           </li>
           <li>
@@ -101,9 +93,7 @@ const Contact = ({ setElementInView, elementInView, play, stop }) => {
                 stop()
               }}
             >
-              {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faGithubAlt} className='icon' />
-              {/* <i class='fab fa-facebook-f icon'></i>{' '} */}
             </a>
           </li>
         </section>
