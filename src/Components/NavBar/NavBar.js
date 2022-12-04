@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react'
-import Home from '../Home/Home'
+
 import './NavBar.css'
 
 const NavBar = () => {

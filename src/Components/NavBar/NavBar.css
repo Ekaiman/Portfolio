@@ -34,9 +34,6 @@ li {
 }
 
 .nav-button[aria-current='page'] {
-  /* background-color: rgba(159, 159, 159, 0.295);
-  font-weight: 700;
-  text-decoration: underline; */
   color: hotpink;
   transition-delay: .3s;
   transition-duration: 2s;
