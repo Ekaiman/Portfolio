@@ -4,7 +4,6 @@ import Modal from '../Modal/Modal'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect, useState } from 'react'
-import ProjectFilter from '../ProjectFilter/ProjectFilter'
 
 const Work = ({
   showModal,
@@ -76,9 +75,7 @@ const Work = ({
             description={description}
           />
         </AnimatePresence>
-
         <h1 className='section-title'>PROJECTS</h1>
-        {/* <ProjectFilter projects={projects} setShowingProjects={setShowingProjects} showingProjects={showingProjects} /> */}
         <div ref={ref1} className='project-holder'>
           {projectCard}
         </div>
