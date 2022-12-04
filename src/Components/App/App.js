@@ -44,7 +44,8 @@ function App() {
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
     } else if (elementInView.length > 1) {
-      document.querySelector('.contact').ariaCurrent = elementInView[1]
+      let item = `.${elementInView[0]}`
+      document.querySelector(item).ariaCurrent = 'page'
     }
   }, [elementInView])
 
