@@ -1,12 +1,12 @@
 import './SingleProj.css'
 import React, { useEffect, useState } from 'react'
-import Modal from '../Modal/Modal'
-import { motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+
+import { motion} from 'framer-motion'
+
 
 const SingleProj = ({
   control,
-  inView,
+
   index,
   title,
   img,
@@ -24,16 +24,6 @@ const SingleProj = ({
     hidden: { y: 200, opacity: 0, scale: 0.4 }
   }
 
-  
-
-  // console.log(control)
-
-  // useEffect(() => {
-  //   console.log(inView, 'yes')
-  //   if (inView) {
-  //     control.start('visible')
-  //   }
-  // }, [control, inView])
 
   return (
     <>
@@ -50,27 +40,8 @@ const SingleProj = ({
       >
         <img className='project-image' src={img[0]} />
         <motion.div
-          // initial={{scale: 2}}
-          // whileHover={{
-          //   scale: 1,
-          //   transition: { duration: 1 }
-          // }}
           className='middle'
         >
-          {/* <button
-            onClick={() => {
-              showModal()
-              setSelectedProj({
-                title: title,
-                img: img,
-                gitHub: gitHub,
-                overview: overview
-              })
-            }}
-            class='text'
-          >
-            Learn More
-          </button> */}
           <div>
             <h1 className='middle-title'>{title}</h1>
             <p className='middle-lang'>{lang}</p>

@@ -1,34 +1,27 @@
 .container {
-  /* border: solid brown; */
   width: 50%;
   height: 30%;
-  /* position: relative; */
   transition-duration: 1s;
-  /* border: solid green; */
   position: relative;
 }
 
 .project-image {
-  /* object-fit: cover;  */
   opacity: 1;
   display: block;
   width: 100%;
   transition: 1s ease;
   backface-visibility: hidden;
-  /* border: solid pink; */
   position: relative;
 }
 
 @media only screen and (max-width: 768px) {
   .container {
-    /* border:solid orange; */
     width: 100%;
     transition-duration: 1s;
   }
 }
 @media only screen and (min-width: 1200px) {
   .container {
-    /* border: solid red; */
     width: 33.33%;
     transition-duration: 1s;
   }
@@ -55,10 +48,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* transform: translate(-50%, -50%); */
-  /* -ms-transform: translate(-50%, -50%); */
   text-align: center;
-  /* border: solid yellow; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,30 +75,12 @@
 
 }
 
-/* .text {
-  background-color: #da59d4;
-  color: white;
-  border: solid #da59d4;
-  font-size: 3vh;
-  padding: 5px 10px;
-}
-
-.text:hover {
-  background-color: transparent;
-  border: solid #da59d4;
-  color:#da59d4;
-  transition-duration: 2s;
-  cursor: pointer;
-
-} */
 
 /* CSS */
 .button-6 {
   align-items: center;
   background-color: #ffffff;
   border: 3px solid #d459ac;
-
-  /* border-radius: 0.25rem; */
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
   box-sizing: border-box;
   color: #d459ac;
@@ -146,11 +118,3 @@
 .button-6:hover {
   transform: translateY(-1px);
 }
-
-/* .button-6:active {
-  background-color: #f0f0f1;
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  color: rgba(0, 0, 0, 0.65);
-  transform: translateY(0);
-} */
