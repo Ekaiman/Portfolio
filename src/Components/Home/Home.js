@@ -22,6 +22,7 @@ const Home = ({
   const [windowsize, setWindowSize] = useState({ height: 0, width: 0 })
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 })
   const [currentQuote, setCurrentQuote] = useState(0)
+  const [volumeOn, setVolumeOn] = useState(true)
   const emili = [
     'A FRONT-END DEVELOPER',
     'AN OUTDOOR LOVER',
@@ -40,10 +41,6 @@ const Home = ({
       setCurrentQuote(0)
     }
     // console.log(currentQuote)
-  }
-
-  const changeImage = () => { 
-    document.querySelector('.volumePlay').icon.remove('faVolumeHigh')
   }
   // const handleMouseMove = event => {
   //   setMouseCoords({ x: event.clientX, y: event.clientY })
@@ -77,22 +74,25 @@ const Home = ({
       className='home-wrapper'
     >
       <div className='volume-holder'>
+        {!volumeOn &&
         <FontAwesomeIcon
           icon={faVolumeHigh}
           className='volumePlay'
           onClick={() => {
             volumeControll(0.2)
-            changeImage()
+            setVolumeOn(true)
           }}
         />
-        {/* <FontAwesomeIcon
+ } {volumeOn &&
+        <FontAwesomeIcon
           icon={faVolumeMute}
           className='volumeMute'
           onClick={() => {
             volumeControll(0)
+            setVolumeOn(false)
           }}
-          
-        /> */}
+        />
+        }
       </div>
       <div className='all-home-text'>
         <div className='text-holder'>
@@ -100,7 +100,6 @@ const Home = ({
             EMILI
           </h1>
           <h1 className='home-text kaiman'>KAIMAN</h1>
-          {/* <h1 className='home-text'>KAIMAN:</h1> */}
         </div>
         <h1 className='home-text quote'>{emili[currentQuote]}</h1>
       </div>
