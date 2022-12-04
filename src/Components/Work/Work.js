@@ -35,11 +35,9 @@ const Work = ({
 
   useEffect(() => {
     if (inView1) {
-      console.log('WORK')
       setElementInView(prev => [...prev, 'work'])
     }
     if (!inView1) {
-      console.log('not in view WORK')
       let removeElem = elementInView.filter(elem => elem !== 'work')
       setElementInView(removeElem)
     }
