@@ -3,16 +3,13 @@ import { filterProps, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
 import { useRef, useState, useCallback } from 'react'
-import useSound from 'use-sound'
 // import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
-
-const About = ({ setElementInView, elementInView }) => {
+const About = ({ setElementInView, elementInView, play }) => {
   const control = useAnimation()
   const [ref, inView] = useInView()
   const [ref1, inView1] = useInView()
   const [bioLength, setBioLength] = useState('mid')
-
 
   const emiliAbout = {
     short: ' creative thinker and problem solver.',
@@ -28,8 +25,6 @@ const About = ({ setElementInView, elementInView }) => {
     visible: { x: 0, opacity: 1 },
     hidden: { x: -200, opacity: 0 }
   }
-
-  // const [playActive] = useSound('/sounds/pop-down.mp3', { volume: 0.5 })
 
   const boxVariantRight = {
     visible: { x: 0, opacity: 1 },
@@ -53,7 +48,9 @@ const About = ({ setElementInView, elementInView }) => {
 
   return (
     <div id='about' className='about-screen'>
-      <h1 className='section-title about-title'>ABOUT</h1>
+      <>
+        <h1 className='section-title about-title'>ABOUT</h1>
+      </>
 
       <motion.section
         ref={ref}
@@ -76,64 +73,78 @@ const About = ({ setElementInView, elementInView }) => {
           transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
           className='about-items'
         >
-  
-            <p className='adjust-bio-length'>Adjust bio length:</p>
-            <div className='bio-length'>
-              <div className='radio-buttons'>
-                <input
-                  type='radio'
-                  value='short'
-                  className='radio-button'
-                  name='length'
-                  // onMouseEnter={() => {
-                  // }}
-                  onClick={() => {
-                    setBioLength('short')
-                  }}
-                />
-                <input
-                  type='radio'
-                  value='shortMid'
-                  className='radio-button'
-                  name='length'
-                  onClick={() => {
-                    setBioLength('shortMid')
-                  }}
-                />
-                <input
-                  type='radio'
-                  value='mid'
-                  className='radio-button'
-                  name='length'
-                  defaultChecked={true}
-                  onClick={() => {
-                    setBioLength('mid')
-                  }}
-                />
-                <input
-                  type='radio'
-                  value='midLong'
-                  className='radio-button'
-                  name='length'
-                  onClick={() => {
-                    setBioLength('midLong')
-                  }}
-                />
-                <input
-                  type='radio'
-                  value='long'
-                  className='radio-button'
-                  name='length'
-                  onClick={() => {
-                    setBioLength('long')
-                  }}
-                />
-              </div>
-              <div className='short-long'>
-                <p>shortest</p>
-                <p>longest</p>
-              </div>
+          <p className='adjust-bio-length'>Adjust bio length:</p>
+          <div className='bio-length'>
+            <div className='radio-buttons'>
+              <input
+                type='radio'
+                value='short'
+                className='radio-button'
+                name='length'
+                // onMouseEnter={() => {
+                // }}
+                onClick={() => {
+                  setBioLength('short')
+                }}
+                onMouseEnter={() => {
+                  play()
+                }}
+              />
+              <input
+                type='radio'
+                value='shortMid'
+                className='radio-button'
+                name='length'
+                onClick={() => {
+                  setBioLength('shortMid')
+                }}
+                onMouseEnter={() => {
+                  play()
+                }}
+              />
+              <input
+                type='radio'
+                value='mid'
+                className='radio-button'
+                name='length'
+                defaultChecked={true}
+                onClick={() => {
+                  setBioLength('mid')
+                }}
+                onMouseEnter={() => {
+                  play()
+                }}
+              />
+              <input
+                type='radio'
+                value='midLong'
+                className='radio-button'
+                name='length'
+                onClick={() => {
+                  setBioLength('midLong')
+                }}
+                onMouseEnter={() => {
+                  play()
+                }}
+              />
+              <input
+                type='radio'
+                value='long'
+                className='radio-button'
+                name='length'
+                onClick={() => {
+                  setBioLength('long')
+                }}
+                onMouseEnter={() => {
+                  play()
+                }}
+              />
             </div>
+            <div className='short-long'>
+              <p>shortest</p>
+              <p>longest</p>
+            </div>
+          </div>
           <h2 className='intro'>I'm Emili:</h2>
           <h2 className='about-words intro'>{emiliAbout[bioLength]}</h2>
         </motion.section>

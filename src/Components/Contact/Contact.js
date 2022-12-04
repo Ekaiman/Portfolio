@@ -10,7 +10,7 @@ import {
   faGithubAlt
 } from '@fortawesome/free-brands-svg-icons'
 
-const Contact = ({ setElementInView, elementInView }) => {
+const Contact = ({ setElementInView, elementInView, play, stop }) => {
   const [ref, inView] = useInView()
 
   useEffect(() => {
@@ -36,7 +36,13 @@ const Contact = ({ setElementInView, elementInView }) => {
       <p className='contact-words'>
         Shoot me an <a href='mailto:emilikaiman@gmail.com'>email.</a>
       </p>
-      <a href='#home' className='arrow-container'>
+      <a
+        href='#home'
+        className='arrow-container'
+        onMouseEnter={() => {
+          play()
+        }}
+      >
         <p className='arrow-up'>^</p>
         <p className='arrow-up'>^</p>
         <p className='arrow-up'>^</p>
@@ -44,7 +50,7 @@ const Contact = ({ setElementInView, elementInView }) => {
 
       {/* <footer className='contact-links'> */}
       <ul className='contact-links'>
-        <p className='connect'>CONNECT WITH EMILI:</p>
+        <p className='connect'>LETS CONNECT:</p>
         <section className='links'>
           <li>
             <a
@@ -52,6 +58,12 @@ const Contact = ({ setElementInView, elementInView }) => {
               target='_blank'
               rel='noopener noreferrer'
               href='https://www.linkedin.com/in/emilikaiman/'
+              onMouseEnter={() => {
+                play()
+              }}
+              onMouseLeave={() => {
+                stop()
+              }}
             >
               {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faLinkedinIn} className='icon' />
@@ -64,6 +76,12 @@ const Contact = ({ setElementInView, elementInView }) => {
               target='_blank'
               rel='noopener noreferrer'
               href='mailto:emilikaiman@gmail.com'
+              onMouseEnter={() => {
+                play()
+              }}
+              onMouseLeave={() => {
+                stop()
+              }}
             >
               {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faGoogle} className='icon' />
@@ -76,6 +94,12 @@ const Contact = ({ setElementInView, elementInView }) => {
               target='_blank'
               rel='noopener noreferrer'
               href='https://github.com/Ekaiman'
+              onMouseEnter={() => {
+                play()
+              }}
+              onMouseLeave={() => {
+                stop()
+              }}
             >
               {/* <FontAwesomeIcon icon={faHome} className='icon'/> */}
               <FontAwesomeIcon icon={faGithubAlt} className='icon' />

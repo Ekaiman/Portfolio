@@ -4,11 +4,21 @@ import './Home.css'
 import {
   faArrowsRotate,
   faHome,
-  faRotate
+  faRotate,
+  faVolumeHigh,
+  faVolumeMute,
+  showVolume,
+  setShowVolume
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const Home = ({ setElementInView, elementInView }) => {
+const Home = ({
+  setElementInView,
+  elementInView,
+  play,
+  playWater,
+  volumeControll
+}) => {
   const [windowsize, setWindowSize] = useState({ height: 0, width: 0 })
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 })
   const [currentQuote, setCurrentQuote] = useState(0)
@@ -17,12 +27,11 @@ const Home = ({ setElementInView, elementInView }) => {
     'AN OUTDOOR LOVER',
     'PASSIONATE ABOUT CHEESE',
     'ENTHUSIASTIC LEARNER',
-    'FRIEND TO ANIMALS',
-
+    'FRIEND TO ANIMALS'
   ]
 
   const changeQuote = () => {
-    console.log(currentQuote)
+    // console.log(currentQuote)
     let newQuote = currentQuote
     newQuote++
     if (newQuote < emili.length) {
@@ -30,7 +39,11 @@ const Home = ({ setElementInView, elementInView }) => {
     } else {
       setCurrentQuote(0)
     }
-    console.log(currentQuote)
+    // console.log(currentQuote)
+  }
+
+  const changeImage = () => { 
+    document.querySelector('.volumePlay').icon.remove('faVolumeHigh')
   }
   // const handleMouseMove = event => {
   //   setMouseCoords({ x: event.clientX, y: event.clientY })
@@ -63,14 +76,30 @@ const Home = ({ setElementInView, elementInView }) => {
       id='home'
       className='home-wrapper'
     >
+      <div className='volume-holder'>
+        <FontAwesomeIcon
+          icon={faVolumeHigh}
+          className='volumePlay'
+          onClick={() => {
+            volumeControll(0.2)
+            changeImage()
+          }}
+        />
+        {/* <FontAwesomeIcon
+          icon={faVolumeMute}
+          className='volumeMute'
+          onClick={() => {
+            volumeControll(0)
+          }}
+          
+        /> */}
+      </div>
       <div className='all-home-text'>
         <div className='text-holder'>
           <h1 ref={ref} className='home-text emili'>
             EMILI
           </h1>
-          <h1 className='home-text kaiman'>
-            KAIMAN
-          </h1>
+          <h1 className='home-text kaiman'>KAIMAN</h1>
           {/* <h1 className='home-text'>KAIMAN:</h1> */}
         </div>
         <h1 className='home-text quote'>{emili[currentQuote]}</h1>
@@ -81,7 +110,9 @@ const Home = ({ setElementInView, elementInView }) => {
         onClick={() => {
           changeQuote()
           rotate()
+          playWater()
         }}
+        onMouseEnter={() => {}}
       />
 
       <a
@@ -89,6 +120,9 @@ const Home = ({ setElementInView, elementInView }) => {
         className='view-work-button'
         onClick={() => {
           document.querySelector('.about').ariaCurrent = 'page'
+        }}
+        onMouseEnter={() => {
+          play()
         }}
       >
         {' '}
