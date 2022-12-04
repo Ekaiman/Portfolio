@@ -47,13 +47,7 @@
 .back-button:hover {
   background-color: rgba(176, 176, 176, 0.38);
   color: rgba(0, 0, 0, 0.602);
-  /* background-color: #00000038; */
-  /* color: white; */
 }
-
-/* .next-button-outside {
-  border: solid yellow;
-} */
 
 .back-button {
   position: absolute;
@@ -69,7 +63,6 @@
 
 @media only screen and (max-width: 695px) {
   .modal-holder {
-    /* border: solid red; */
     width: 500px;
     height: 600px;
     margin-top: 10%;
@@ -78,9 +71,7 @@
 
 @media only screen and (max-width: 550px) {
   .modal-holder {
-    /* border: solid purple; */
     width: 80vw;
-    /* height: 500px; */
     margin-top: 10%;
   }
 
@@ -109,16 +100,11 @@
 
 @media only screen and (max-height: 637px) {
   .modal-holder {
-    /* border: solid rgb(61, 153, 97); */
     width: 300px;
     height: 500px;
     margin-top: 10%;
   }
 }
-
-/* .image-holder {
-  border: solid yellow;
-} */
 
 .overview-holder {
   max-width: 99%;
@@ -164,12 +150,6 @@ hr {
   line-height: 20px;
 }
 
-/* .gitHub-button:hover {
-  background-color: white;
-  color: #d459ac;
-  transition-duration: 2s;
-} */
-
 .button-holder {
   display: flex;
   justify-content: space-between;
@@ -193,32 +173,3 @@ hr {
   cursor: pointer;
   transition-duration: 2s;
 }
-
-/* .close:focus {
-  outline: solid 0 transparent;
-  box-shadow: 0 0 0 2px #080c0f;
-} */
-
-/* .close:hover {
-  background: #d459ac;
-  color: white;
-} */
-
-.close:before,
-.close:after {
-  position: absolute;
-  top: 15%;
-  left: calc(50% - 0.0625em);
-  width: 0.125em;
-  height: 70%;
-  border-radius: 0.125em;
-  transform: rotate(45deg);
-  background: currentcolor;
-  content: '';
-}
-
-.close:after {
-  transform: rotate(-45deg);
-}
-
-/* arrow buttons */

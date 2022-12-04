@@ -1,6 +1,5 @@
 import './Modal.css'
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
 
 const Modal = ({
   show,
@@ -19,10 +18,8 @@ const Modal = ({
     console.log(img)
     if (img.length > count) {
       document.querySelector('.image-in-modal').src = img[count]
-      console.log('next')
     } else {
       count = 0
-      console.log('begining')
       document.querySelector('.image-in-modal').src = img[count]
     }
   }
@@ -31,10 +28,8 @@ const Modal = ({
     count--
     if (count >= 0) {
       document.querySelector('.image-in-modal').src = img[count]
-      console.log('next')
     } else {
       count = img.length - 1
-      console.log(count)
       document.querySelector('.image-in-modal').src = img[count]
     }
   }
@@ -49,9 +44,8 @@ const Modal = ({
         exit={{ opacity: 0, scale: 0.7 }}
       >
         <div className='modal-holder' onClick={e => e.stopPropagation()}>
-          {/* <div className='image-holder'> */}
+
           <img className='image-in-modal' src={img[0]} alt={title} />
-          {/* </div> */}
           <section className='overview-holder'>
             {img.length > 1 && (
               <>
