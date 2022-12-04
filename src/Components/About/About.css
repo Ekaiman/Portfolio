@@ -45,7 +45,7 @@
   /* color: pink; */
 }
 
-.radio-buttons:hover{
+.radio-buttons:hover, .radio-button:hover{
   cursor: pointer;
 }
 
