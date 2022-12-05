@@ -47,6 +47,7 @@
 .back-button:hover {
   background-color: rgba(176, 176, 176, 0.38);
   color: rgba(0, 0, 0, 0.602);
+  cursor: pointer;
 }
 
 .back-button {
