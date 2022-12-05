@@ -58,7 +58,7 @@
   display: inline-block;
   padding: 5px 16px 10px;
   font-size: 40px;
-  color: #ffffff7f;
+  color: #1110107f;
   background-color: #00000038;
 }
 
@@ -167,10 +167,26 @@ hr {
   height: 2em;
   border-radius: 50%;
   background: transparent;
-  color:#87647b;
-
+  color:#a6518a;
   font: inherit;
   text-indent: 100%;
   cursor: pointer;
   transition-duration: 2s;
+}
+
+.close:before,	
+.close:after {	
+  position: absolute;	
+  top: 15%;	
+  left: calc(50% - 0.0625em);	
+  width: 0.125em;	
+  height: 70%;	
+  border-radius: 0.125em;	
+  transform: rotate(45deg);	
+  background: currentcolor;	
+  content: '';	
+}	
+
+.close:after {	
+  transform: rotate(-45deg);	
 }
