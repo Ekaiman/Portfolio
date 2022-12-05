@@ -15,8 +15,8 @@ const About = ({ setElementInView, elementInView, play }) => {
   const emiliAbout = {
     short: ' creative thinker and problem solver.',
     shortMid:
-      ' creative thinker gone Front-end Engineer.  I know JavaScript and React really well.',
-    mid: ' creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I know JavaScript, React, TypeScript and think E2E and user flow testing is important.',
+      ' creative thinker gone Front-end Engineer.  I have experience with JavaScript and React.',
+    mid: ' creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I have experience with JavaScript, React, TypeScript and think E2E and user flow testing is important.',
     midLong:
       " artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO.",
     long: " outdoor enthusiast, artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and user flow testing. I'm located in Denver, CO and in my spare time you'll find me in the outdoors finding ways to get my endorphins pumping, in a ceramics studio, or curled up cuddling my cat named Baby."
@@ -161,7 +161,7 @@ const About = ({ setElementInView, elementInView, play }) => {
         <p className='contact-connect'>LETS CONNECT!</p>
         <motion.div
           animate={{
-            translateY: [0, 0, 10, 10, 0]
+            translateY: [0, 0, 10, -1.5, 0]
           }}
           transition={{
             duration: 1,
