@@ -58,13 +58,13 @@
   font-size: 20vw;
   padding-bottom: 0px;
   margin: 0;
+  line-height: 17vw;
 }
 .kaiman{
   font-size: 12vw;
   background-color: black;
   color:#fee743;
   padding: 0px 2vw 0px 2vw;
-  margin: 0px 0px 3vh 0px;
 }
 
 .quote{
