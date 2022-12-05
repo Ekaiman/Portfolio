@@ -30,7 +30,6 @@
   text-decoration: none;
   color: #e200e2;
   font-weight: 300;
-
 }
 
 .about-image {
@@ -54,6 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .radio-buttons {
@@ -95,6 +95,8 @@
 .intro {
   display: inline;
   font-size: 21px;
+  letter-spacing: 1.5px;
+  line-height: 25px;
 }
 
 .arrow-container{
@@ -127,12 +129,9 @@
   }
 
   .about-items {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 2%;
   }
+
   .about-image {
     margin-top: 30px;
     margin-right: 30px;
