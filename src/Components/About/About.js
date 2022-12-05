@@ -32,6 +32,11 @@ const About = ({ setElementInView, elementInView, play }) => {
     hidden: { x: 200, opacity: 0 }
   }
 
+  const boxVariant = {
+    visible: { opacity: 1 },
+    hidden: {opacity: 0}
+  }
+
   useEffect(() => {
     if (inView) {
       control.start('visible')
@@ -63,7 +68,7 @@ const About = ({ setElementInView, elementInView, play }) => {
       >
         <img ref={ref1} className='about-image' src='../../../../picture.png' />
         <motion.section
-          ref={ref}
+          // ref={ref}
           variants={boxVariantRight}
           initial='hidden'
           animate={control}
@@ -149,8 +154,7 @@ const About = ({ setElementInView, elementInView, play }) => {
         </motion.section>
       </motion.section>
       <motion.a
-        ref={ref}
-        variants={boxVariantRight}
+        variants={boxVariant}
         initial='hidden'
         animate={control}
         transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
