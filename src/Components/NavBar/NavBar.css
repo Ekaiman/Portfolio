@@ -1,0 +1,40 @@
+li {
+  list-style-type: none;
+}
+
+.nav-wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #1b2430;
+  margin: 0px;
+  z-index: 9;
+  border-radius: 0 5 5 0;
+  border-color: aqua;
+}
+
+.nav-items {
+  border: solid #87fffb;
+  border-width: 0px 0px 4px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 4vh;
+  color: white;
+  padding: 6px;
+  margin: 0px;
+}
+
+.nav-button {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+
+}
+
+.nav-button[aria-current='page'] {
+  color: hotpink;
+  transition-delay: .3s;
+  transition-duration: 2s;
+}
