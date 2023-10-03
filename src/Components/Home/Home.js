@@ -54,6 +54,14 @@ const Home = ({
     }
   }, [inView])
 
+  useEffect(() => { 
+     {
+       console.log(
+         'Hello! Thanks for viewing my portfolio. Everything you see here came from my fingertips-- including this portfolio. I have a lot to learn but I am proud of where I started and how far I have come!'
+       )
+     }
+  },[])
+
   return (
     <header
       id='home'
@@ -114,6 +122,7 @@ const Home = ({
         {' '}
         VIEW MY WORK
       </a>
+      
     </header>
   )
 }
