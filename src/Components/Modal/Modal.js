@@ -14,8 +14,6 @@ const Modal = ({
 
   const nextImage = () => {
     count++
-    console.log(img.length)
-    console.log(img)
     if (img.length > count) {
       document.querySelector('.image-in-modal').src = img[count]
     } else {
