@@ -6,7 +6,6 @@
   align-items: center;
   position: sticky;
   background-color: #6d97cb;
-  background-attachment: fixed;
 }
 
 .all-home-text {
@@ -127,6 +126,10 @@
   .back {
     width: 70vw;
     padding: 30px;
+  }
+
+  .home-wrapper{
+    background-attachment: fixed;
   }
 }
 
