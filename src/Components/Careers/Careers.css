@@ -70,16 +70,29 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .line{
+  .line {
     left: 10%;
   }
 
-  .job{
+  .job {
     width: 75vw;
   }
 
-  .careers-holder{
+  .careers-holder {
     height: fit-content;
     margin-bottom: 15px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
