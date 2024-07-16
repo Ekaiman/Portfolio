@@ -50,7 +50,6 @@ function App() {
       elementInView.length === 1 &&
       elementInView.includes('careers')
     ) {
-      console.log('careeeer')
       document.querySelector('.careers').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.about').ariaCurrent = false
@@ -60,14 +59,12 @@ function App() {
       elementInView.length === 1 &&
       elementInView.includes('contact')
     ) {
-      console.log('CONTACT')
       document.querySelector('.contact').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.careers').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
     } else if (elementInView.length > 1) {
-      console.log('something!!!')
       let item = `.${elementInView[0]}`
       document.querySelector(item).ariaCurrent = 'page'
     }
