@@ -7,7 +7,6 @@ import {
   faVolumeMute,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import backgroundImage from '../../background.png'
 
 const Home = ({
   setElementInView,
@@ -28,7 +27,7 @@ const Home = ({
   ]
 
   const style = {
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(${'../../../../background.png'})`,
     height: '100vh',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
