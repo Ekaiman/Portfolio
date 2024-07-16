@@ -2,6 +2,7 @@ import NavBar from '../NavBar/NavBar'
 import Work from '../Work/Work'
 import Home from '../Home/Home'
 import About from '../About/About'
+import Careers from '../Careers/Careers'
 import { useState, useEffect, useRef, useCallback, Profiler } from 'react'
 import './App.css'
 import Contact from '../Contact/Contact'
@@ -12,40 +13,46 @@ import useSound from 'use-sound'
 import boop from '../../sounds/boop.mp3'
 import water from '../../sounds/water.mp3'
 
-
-
 function App() {
   const [showing, setShowing] = useState(false)
   const [elementInView, setElementInView] = useState([])
 
-
-  const [volume, setVolume] = useState(.2)
+  const [volume, setVolume] = useState(0.2)
   const [showVolume, setShowVolume] = useState(false)
   const [play, { stop }] = useSound(boop, { volume })
   const [playWater, { stopWater }] = useSound(water, { volume })
 
-
-  const volumeControll = (level) => { 
+  const volumeControll = level => {
     setVolume(level)
   }
-  
-
-  
 
   //highlighting current href aria tag
   useEffect(() => {
     if (elementInView.length === 1 && elementInView.includes('home')) {
       document.querySelector('.home').ariaCurrent = 'page'
+      document.querySelector('.careers').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.about').ariaCurrent = false
       document.querySelector('.contact').ariaCurrent = false
     } else if (elementInView.length === 1 && elementInView.includes('about')) {
       document.querySelector('.about').ariaCurrent = 'page'
+      document.querySelector('.careers').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.contact').ariaCurrent = false
     } else if (elementInView.length === 1 && elementInView.includes('work')) {
       document.querySelector('.work').ariaCurrent = 'page'
+      document.querySelector('.careers').ariaCurrent = false
+      document.querySelector('.about').ariaCurrent = false
+      document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.contact').ariaCurrent = false
+    } else if (
+      elementInView.length === 1 &&
+      elementInView.includes('careers')
+    ) {
+      console.log('careeeer')
+      document.querySelector('.careers').ariaCurrent = 'page'
+      document.querySelector('.work').ariaCurrent = false
       document.querySelector('.about').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
       document.querySelector('.contact').ariaCurrent = false
@@ -53,11 +60,14 @@ function App() {
       elementInView.length === 1 &&
       elementInView.includes('contact')
     ) {
+      console.log('CONTACT')
       document.querySelector('.contact').ariaCurrent = 'page'
       document.querySelector('.work').ariaCurrent = false
       document.querySelector('.home').ariaCurrent = false
+      document.querySelector('.careers').ariaCurrent = false
       document.querySelector('.work').ariaCurrent = false
     } else if (elementInView.length > 1) {
+      console.log('something!!!')
       let item = `.${elementInView[0]}`
       document.querySelector(item).ariaCurrent = 'page'
     }
@@ -189,7 +199,10 @@ function App() {
         projects={projects}
         description={selectedProj.description}
       />
-
+      <Careers
+        setElementInView={setElementInView}
+        elementInView={elementInView}
+      />
       <Contact
         setElementInView={setElementInView}
         elementInView={elementInView}

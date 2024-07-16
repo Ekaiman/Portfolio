@@ -38,3 +38,10 @@ li {
   transition-delay: .3s;
   transition-duration: 2s;
 }
+
+@media only screen and (max-width: 500px) {
+  .nav-wrapper{
+    display: none;
+  }
+  
+}

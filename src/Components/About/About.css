@@ -19,8 +19,7 @@
   width: 100%;
 }
 
-
-.about-me-icons{
+.about-me-icons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,7 +27,7 @@
   padding-top: 7vh;
   padding-bottom: 6vh;
   text-decoration: none;
-  color: #e200e2;
+  color: hotpink;
   font-weight: 300;
 }
 
@@ -45,15 +44,14 @@
   margin: 0;
 }
 
-.contact-connect{
+.contact-connect {
   font-size: 14px;
 }
 
-.bio-radio-holder{
+.bio-radio-holder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .radio-buttons {
@@ -67,7 +65,7 @@
 }
 
 .radio-button {
-  accent-color: #e200e2;
+  accent-color: hotpink;
   -ms-transform: scale(1.2); /* IE 9 */
   -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
   transform: scale(1.2);
@@ -99,7 +97,7 @@
   line-height: 25px;
 }
 
-.arrow-container{
+.arrow-container {
   position: relative;
   text-decoration: none;
   color: black;
@@ -113,8 +111,8 @@
   z-index: 1;
 }
 
-.arrow-down{
-  margin:0;
+.arrow-down {
+  margin: 0;
   padding: 0;
   font-size: 40px;
 }
@@ -137,7 +135,7 @@
     margin-right: 30px;
   }
 
-  .intro{
+  .intro {
     display: inline;
   }
 }
@@ -147,7 +145,7 @@
     width: 80%;
   }
 
-  .intro{
+  .intro {
     display: inline;
   }
 }

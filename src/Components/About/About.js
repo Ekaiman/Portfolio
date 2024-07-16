@@ -2,7 +2,7 @@ import './About.css'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { useEffect } from 'react'
-import {useState} from 'react'
+import { useState } from 'react'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -15,11 +15,11 @@ const About = ({ setElementInView, elementInView, play }) => {
   const emiliAbout = {
     short: ' creative thinker and problem solver.',
     shortMid:
-      ' creative thinker gone Front-end Engineer.  I have experience with JavaScript and React.',
-    mid: ' creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I have experience with JavaScript, React, TypeScript and think E2E and unit testing is important.',
+      ' creative thinker gone Front-end Engineer.  I have experience with JavaScript, Angular, and React.',
+    mid: ' creative thinker, challenge seeker and Front-end Engineer. I thrive in environments that require critical thinking and problem solving. I have experience with JavaScript, Angular, React, TypeScript and think E2E and unit testing is important.',
     midLong:
-      " artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and unit testing. I'm located in Denver, CO.",
-    long: " outdoor enthusiast, artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I've spent the last year learning front-end development and specialize in JavaScript, React, TypeScript and see importance in both end-to-end and unit testing. I'm located in Denver, CO and in my spare time you'll find me in the outdoors finding ways to get my endorphins pumping, in a ceramics studio, or curled up cuddling my cat named Baby."
+      " artist and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I specialize in JavaScript, Angular, React, TypeScript and see importance in both end-to-end and unit testing. I'm located in Denver, CO.",
+    long: " outdoor enthusiast, artist, and creative thinker gone Front-end Engineer. As someone who actively seeks out challenges, I'm excited to be in a career that promotes life long learning and endless opportunities for growth. I thrive in environments that require critical thinking and problem solving. I specialize in JavaScript, Angular, React, TypeScript and see importance in both end-to-end and unit testing. I'm located in Denver, CO and in my spare time you'll find me in the outdoors finding ways to get my endorphins pumping, in a ceramics studio, trying new reicpes in the kitchen, or hanging out with my dogs."
   }
 
   const boxVariantLeft = {
@@ -34,7 +34,7 @@ const About = ({ setElementInView, elementInView, play }) => {
 
   const boxVariant = {
     visible: { opacity: 1 },
-    hidden: {opacity: 0}
+    hidden: { opacity: 0 }
   }
 
   useEffect(() => {
@@ -160,7 +160,9 @@ const About = ({ setElementInView, elementInView, play }) => {
         transition={{ ease: [1, -0.65, 0, 2.25], duration: 2, delay: 0.3 }}
         className='about-me-icons'
         href='#contact'
-        onMouseEnter={() => { play()}}
+        onMouseEnter={() => {
+          play()
+        }}
       >
         <p className='contact-connect'>LETS CONNECT!</p>
         <motion.div

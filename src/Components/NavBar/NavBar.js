@@ -22,6 +22,11 @@ const NavBar = () => {
             </a>
           </li>
           <li>
+            <a className='careers nav-button' href='#careers'>
+              CAREERS
+            </a>
+          </li>
+          <li>
             <a className='contact nav-button' href='#contact'>
               CONTACT
             </a>

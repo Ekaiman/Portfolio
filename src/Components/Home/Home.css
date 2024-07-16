@@ -4,10 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: slide-in 1s linear;
-  background-color: #fce74a;
-  border: solid #252934;
-  position: relative;
+  position: sticky;
+  background-attachment:fixed;
 }
 
 .all-home-text {
@@ -16,10 +14,10 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
-  
 }
 
-.volumeMute, .volumePlay{
+.volumeMute,
+.volumePlay {
   font-size: 28px;
   padding: 6px;
   position: absolute;
@@ -32,18 +30,18 @@
 .view-work-button {
   text-decoration: none;
   color: inherit;
-  border: solid rgb(0, 0, 0);
+  border: solid white;
   transition-duration: 0.7s;
-  color: rgb(0, 0, 0);
+  color: white;
   margin-top: 25px;
   padding: 20px;
   font-weight: 800;
 }
 
 .view-work-button:hover {
-  background-color: black;
-  border: solid black;
-  color: #fce74a;
+  background-color: #f9a9926e;
+  border: solid #f9a9926e;
+  color: white;
 }
 
 .home-text {
@@ -54,20 +52,20 @@
   display: block;
 }
 
-.emili{
+.emili {
   font-size: 20vw;
   padding-bottom: 0px;
   margin: 0;
   line-height: 17vw;
 }
-.kaiman{
+.kaiman {
   font-size: 12vw;
-  background-color: black;
-  color:#fee743;
+  color: none;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding: 0px 2vw 0px 2vw;
 }
 
-.quote{
+.quote {
   font-size: 4vw;
   margin-bottom: 15px;
 }
@@ -112,7 +110,6 @@
   }
 }
 
-.hide{
+.hide {
   display: none;
 }
-

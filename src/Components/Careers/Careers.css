@@ -1,0 +1,85 @@
+.careers-holder {
+  height: 96vh;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.job-holder {
+  display: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.circle {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid #9c9c9c;
+}
+
+.two {
+  top: 66%;
+}
+
+.line {
+  position: absolute;
+  top: 55%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 550px;
+  border: 1px solid #9c9c9c;
+}
+
+.job {
+  width: 60vw;
+  margin-left: 30px;
+  top: 2%;
+  position: absolute;
+  font-size: 20px;
+  max-width: 550px;
+}
+
+.job-2 {
+  top: 55%;
+}
+
+.title {
+  color: #474747;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.date {
+  color: gray;
+  font-size: 14px;
+}
+
+.description {
+  color: #9c9c9c;
+  font-size: 15px;
+  margin-top: 0;
+  line-height: 22px;
+}
+
+@media only screen and (max-width: 600px) {
+  .line{
+    left: 10%;
+  }
+
+  .job{
+    width: 75vw;
+  }
+
+  .careers-holder{
+    height: fit-content;
+    margin-bottom: 15px;
+  }
+}

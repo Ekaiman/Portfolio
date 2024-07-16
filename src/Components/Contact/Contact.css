@@ -46,7 +46,7 @@
   position: relative;
   text-decoration: none;
   color: black;
-  background-color: #87fffb;
+  background-color: #7fa7dc;;
   height: 60px;
   width: 40px;
   text-align: center;
@@ -54,6 +54,7 @@
   bottom: 0;
   bottom: 36vh;
   z-index: 1;
+  border-radius: 5px;
 }
 
 .arrow-up{
