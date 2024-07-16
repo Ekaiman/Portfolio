@@ -47,8 +47,8 @@ const Careers = ({ elementInView, setElementInView }) => {
             </h1>
             <p className='description'>
               As a Software Engineer at Dish I had the abilit to identify issues
-              within our software and workflows, and the autonomy to come up
-              with solutions. I used Python scripts, Selenium and WebDriver to
+              within our software and workflows and the autonomy to come up
+              with solutions. I used Python scripts, Selenium, and WebDriver to
               automate manual tasks and reduce processing time. I also worked
               closely with our stakeholders to configure our software to their
               business needs.
