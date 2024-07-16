@@ -127,10 +127,6 @@
     width: 70vw;
     padding: 30px;
   }
-
-  .home-wrapper{
-    background-attachment: fixed;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -147,5 +143,9 @@
   .quote {
     font-size: 3vw;
     margin-bottom: 15px;
+  }
+
+  .home-wrapper{
+    background-attachment: fixed;
   }
 }
