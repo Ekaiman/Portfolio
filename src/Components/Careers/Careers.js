@@ -31,11 +31,11 @@ const Careers = ({ elementInView, setElementInView }) => {
               </h1>
               <p className='description'>
                 As the only frontend engineer at Boomerang DM, I have been
-                responsible for updating the legacy codebase to a mobile
-                friendly and responsive design. I'm proud to say that I have
-                been commited to helping deliver a seamless product to our end
-                users. As just one of two developers, I often wear many hats and
-                participate in QA and design.
+                responsible for updating the legacy codebase to a
+                mobile-friendly and responsive design. I'm proud to say that I
+                have been committed to helping deliver a seamless product to our
+                end users. As one of only two developers, I often wear many hats
+                and participate in QA and design.
               </p>
             </section>
           </section>
@@ -46,12 +46,12 @@ const Careers = ({ elementInView, setElementInView }) => {
               Software Engineer @ Dish Network (fulltime){' '}
             </h1>
             <p className='description'>
-              As a Software Engineer at Dish I had the abilit to identify issues
-              within our software and workflows and the autonomy to come up
-              with solutions. I used Python scripts, Selenium, and WebDriver to
-              automate manual tasks and reduce processing time. I also worked
-              closely with our stakeholders to configure our software to their
-              business needs.
+              As a Software Engineer at Dish, I had the ability to identify
+              issues within our software and workflows, and the autonomy to
+              develop solutions. I used Python scripts, Selenium, and WebDriver
+              to automate manual tasks and reduce processing time. I also worked
+              closely with our stakeholders to configure our software to meet
+              their business needs.
             </p>
           </section>
         </div>
