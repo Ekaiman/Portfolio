@@ -36,6 +36,7 @@
   margin-top: 25px;
   padding: 20px;
   font-weight: 800;
+  border-radius: 5px;
 }
 
 .view-work-button:hover {
@@ -59,10 +60,8 @@
   line-height: 17vw;
 }
 .kaiman {
-  font-size: 12vw;
-  color: none;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  padding: 0px 2vw 0px 2vw;
+  font-size: 13vw;
+ 
 }
 
 .quote {

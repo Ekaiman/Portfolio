@@ -149,6 +149,7 @@ hr {
   color:white;
   font-weight: bold;
   line-height: 20px;
+  border-radius: 5px;
 }
 
 .button-holder {
