@@ -19,11 +19,11 @@ const Home = ({
   const [currentQuote, setCurrentQuote] = useState(0)
   const [volumeOn, setVolumeOn] = useState(true)
   const emili = [
-    'A FRONT-END DEVELOPER',
-    'AN OUTDOOR LOVER',
+    'FRONTEND DEVELOPER',
+    'OUTDOOR LOVER',
     'PASSIONATE ABOUT CHEESE',
     'ENTHUSIASTIC LEARNER',
-    'FRIEND TO ANIMALS'
+    'DOG MOM',
   ]
 
   const style = {
