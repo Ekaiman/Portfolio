@@ -1,5 +1,5 @@
 .careers-holder {
-  height: 96vh;
+  height: 110vh;
   color: black;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@
 .line {
   position: absolute;
   top: 55%;
-  left: 20%;
+  left: 30%;
   transform: translate(-50%, -50%);
   width: 0px;
   height: 550px;
@@ -69,13 +69,13 @@
   line-height: 22px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .line {
     left: 10%;
   }
 
   .job {
-    width: 75vw;
+    width: 60vw;
   }
 
   .careers-holder {
@@ -94,5 +94,11 @@
   .description {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .line {
+    left: 20%;
   }
 }

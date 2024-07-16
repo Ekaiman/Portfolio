@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   position: sticky;
-  background-attachment:fixed;
+  background-attachment: fixed;
 }
 
 .all-home-text {
@@ -14,6 +14,15 @@
   justify-content: center;
   align-items: center;
   width: 80vw;
+}
+
+.back {
+  background-color: #ffffff38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 60vw;
 }
 
 .volumeMute,
@@ -57,11 +66,11 @@
   font-size: 20vw;
   padding-bottom: 0px;
   margin: 0;
-  line-height: 17vw;
+  line-height: 10vw;
 }
+
 .kaiman {
   font-size: 13vw;
- 
 }
 
 .quote {
@@ -111,4 +120,28 @@
 
 .hide {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .back {
+    width: 70vw;
+    padding: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .emili {
+    font-size: 15vw;
+    padding-bottom: 0px;
+    margin: 0;
+    /* line-height: 17vw; */
+  }
+  .kaiman {
+    font-size: 10vw;
+  }
+
+  .quote {
+    font-size: 3vw;
+    margin-bottom: 15px;
+  }
 }

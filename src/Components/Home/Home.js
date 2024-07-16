@@ -71,67 +71,65 @@ const Home = ({
   },[])
 
   return (
-    <header
-      id='home'
-      className='home-wrapper'
-      style={ style}
-    >
+    <header id='home' className='home-wrapper' style={style}>
       <div className='volume-holder'>
-        {!volumeOn &&
+        {!volumeOn && (
+          <FontAwesomeIcon
+            icon={faVolumeHigh}
+            className='volumePlay'
+            onClick={() => {
+              volumeControll(0.2)
+              setVolumeOn(true)
+              play()
+            }}
+          />
+        )}{' '}
+        {volumeOn && (
+          <FontAwesomeIcon
+            icon={faVolumeMute}
+            className='volumeMute'
+            onClick={() => {
+              volumeControll(0)
+              setVolumeOn(false)
+            }}
+          />
+        )}
+      </div>
+      <section className='back'>
+        <div className='all-home-text'>
+          <div className='text-holder'>
+            <h1 ref={ref} className='home-text emili'>
+              EMILI
+            </h1>
+            <h1 className='home-text kaiman'>KAIMAN</h1>
+          </div>
+          <h1 className='home-text quote'>{emili[currentQuote]}</h1>
+        </div>
         <FontAwesomeIcon
-          icon={faVolumeHigh}
-          className='volumePlay'
+          icon={faArrowsRotate}
+          className='refresh'
           onClick={() => {
-            volumeControll(0.2)
-            setVolumeOn(true)
+            changeQuote()
+            rotate()
+            playWater()
+          }}
+          onMouseEnter={() => {}}
+        />
+
+        <a
+          href='#about'
+          className='view-work-button'
+          onClick={() => {
+            document.querySelector('.about').ariaCurrent = 'page'
+          }}
+          onMouseEnter={() => {
             play()
           }}
-        />
- } {volumeOn &&
-        <FontAwesomeIcon
-          icon={faVolumeMute}
-          className='volumeMute'
-          onClick={() => {
-            volumeControll(0)
-            setVolumeOn(false)
-          }}
-        />
-        }
-      </div>
-      <div className='all-home-text'>
-        <div className='text-holder'>
-          <h1 ref={ref} className='home-text emili'>
-            EMILI
-          </h1>
-          <h1 className='home-text kaiman'>KAIMAN</h1>
-        </div>
-        <h1 className='home-text quote'>{emili[currentQuote]}</h1>
-      </div>
-      <FontAwesomeIcon
-        icon={faArrowsRotate}
-        className='refresh'
-        onClick={() => {
-          changeQuote()
-          rotate()
-          playWater()
-        }}
-        onMouseEnter={() => {}}
-      />
-
-      <a
-        href='#about'
-        className='view-work-button'
-        onClick={() => {
-          document.querySelector('.about').ariaCurrent = 'page'
-        }}
-        onMouseEnter={() => {
-          play()
-        }}
-      >
-        {' '}
-        VIEW MY WORK
-      </a>
-      
+        >
+          {' '}
+          VIEW MY WORK
+        </a>
+      </section>
     </header>
   )
 }
