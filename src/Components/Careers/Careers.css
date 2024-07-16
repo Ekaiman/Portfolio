@@ -69,36 +69,40 @@
   line-height: 22px;
 }
 
-@media only screen and (max-width: 800px) {
-  .line {
-    left: 10%;
-  }
-
-  .job {
-    width: 60vw;
-  }
-
-  .careers-holder {
-    height: fit-content;
-    margin-bottom: 15px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .date {
-    font-size: 13px;
-  }
-
-  .description {
-    font-size: 14px;
-    line-height: 20px;
-  }
-}
-
 @media only screen and (max-width: 1200px) {
   .line {
-    left: 20%;
+    left: 22%;
+  }
+  @media only screen and (max-width: 1000px) {
+    .line {
+      left: 17%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .line {
+      left: 5%;
+    }
+
+    .job {
+      width: 80vw;
+    }
+
+    .careers-holder {
+      height: fit-content;
+      margin-bottom: 15px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .date {
+      font-size: 15px;
+    }
+
+    .description {
+      line-height: 20px;
+    }
   }
 }
